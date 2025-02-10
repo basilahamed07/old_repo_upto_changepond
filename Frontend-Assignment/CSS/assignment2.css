@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap');
+*{
+    font-family: "Teko", sans-serif;
+    font-optical-sizing: auto;
+    font-weight:400px;
+    font-style: normal;
+    font-size: 17px;
+}
+
+body{
+    background-color: wheat
+}
+#headers{
+    position: relative;
+    border-radius: 50%;
+    border: 10px solid yellowgreen;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    background-color: darkblue;
+    position: sticky;
+    top: 0;
+    margin: 0;
+    padding-top: 25px;
+    width: 100%;
+    border: 5px solid yellow;
+    border-radius: 30px;
+    height: 200px;
+}
+
+#heding{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 80px;
+    position: relative;
+    top: 30px;
+    padding-bottom: 10px;
+    vertical-align: top;
+    margin-left: 30px;
+    color: white;
+}
+
+
+.one{
+    margin: auto;
+    width: 90%;
+    height: 300px;
+    border: 5px solid brown;
+    border-radius: 30px;
+    overflow: auto;
+    margin-top: 100px;
+}
+
+.one img{
+    width:250px;
+     height:250px;
+    float: left;
+    margin: 10px;
+    margin-top: 20px;
+
+}
+
+.two{
+    margin: auto;
+    width: 90%;
+    height: 300px;
+    border: 5px solid brown;
+    border-radius: 30px;
+    overflow: auto;
+    margin-top: 100px;
+}
+
+.two img{
+    width:250px;
+     height:250px;
+    margin: 10px;
+    margin-top: 20px;
+    float: right;
+    
+}
+
+
+img{
+     width:150px;
+     height:150px;
+     border-radius: 30px;
+     
+}
+
+p{
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+

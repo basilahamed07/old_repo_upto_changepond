@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block page_title %}Day details{% endblock  %}    
+{% block contents %}
+<h1>Writing Month Details</h1>
+    
+{% for trash in text %}
+<li><a href="{% url "day_details_str_path" trash%}">{{trash}}</li>
+{% endfor %}
+</ul>
+{% endblock  %}
+

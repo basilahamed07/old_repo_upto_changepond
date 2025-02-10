@@ -1,0 +1,58 @@
+Store Procideure
+	-> security
+	-> Performance
+	-> modality
+
+1) to create the store procideure
+
+Delimiter $$    
+create procedure getCustomers()
+begin 
+select customerName,city,state,postalcode,country
+from customers
+order by customerName;
+end$$
+Delimiter ; 
+
+delite the procidere
+
+drop procedure getCustomers()
+to delite the procidere
+
+
+2)new tasak
+
+Delimiter $$    
+create procedure getCustomers()
+begin 
+select CustomerName as  cname,concat(city,' ',state, ' ' , postalcode, ' ',country ) address
+from customers
+order by customerName;
+end$$
+Delimiter ; 
+
+call getCustomer()
+
+
+
+3)task
+
+Delimiter $$
+create procedure CreatePerson()
+begin
+drop table if exists persons;
+create table persons(
+id int auto_increment primary key,
+first_name varchar(255) not null,
+last_name varchar(255) not null,);
+
+insert into persons(first_name,last_name)
+values("Basil", "ahamed"),
+("Ahamed", "ahamed"),
+("Basil", "basil"),
+("Bl", "ahamed");
+
+select id, CONCAT(first_name,'',last_name) as "Personal name" from persons;
+
+end$$
+Delimiter ;

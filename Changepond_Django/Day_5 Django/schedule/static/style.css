@@ -1,0 +1,8 @@
+@font-face {
+    font-family: funny-font;
+    src: url(./fonts/Yes\ Free.ttf);
+}
+
+h1{
+    font-family: funny-font;
+}

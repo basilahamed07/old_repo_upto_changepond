@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+</head>
+<body>
+    <script>
+
+        //by using the destructing array
+        let states = ["Tamilnadu", "Goa", "kerala", "delhi"]
+        const [ta,go,kr,dl] = states
+        document.write(`${ta} ${go} ${kr} ${dl} <br>`)
+
+        // by using the object
+
+        let emp = {
+            empid:110,
+            empname : "basil ahamed",
+            empsalary:10000000,
+            emoaddress:"chennai"
+        }
+
+        // by destructuring the object
+
+        const {empid,empname,empsalary,emoaddress} = emp
+        document.write(`${empid}, ${empname} ${empsalary} ${emoaddress}`)
+    </script>
+</body>
+</html>

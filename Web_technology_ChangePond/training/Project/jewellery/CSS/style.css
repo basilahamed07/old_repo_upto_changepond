@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Bonheur+Royale&display=swap');
+@font-face {
+    font-family: "royal";
+    src: url(./royal-serif.ttf);
+}
+
+*{
+font-family: "royal" !important;
+font-weight: 500;
+font-style: normal;
+font-size: 20px;
+color: #FFD700;
+}
+body{
+  background-color: black !important;;
+}
+  #imagecorosal{
+    width:100%;
+  }
+  .informaction{
+    opacity: 0.7;
+  }
+  .informaction:hover{
+    opacity: 1;
+  }
+
+  #colour{
+    color: #FFD700;
+  }
+
+::placeholder{
+    color: #FFD700;
+}
+
+::-ms-input-placeholder { 
+    color: #FFD700;
+}
+
+#transprant{
+    background: transparent;
+    border: #FFD700 solid 1px;
+    color: #FFD700;
+}
+
+input::placeholder{
+    opacity: 0.5 !important;
+    color: #FFD700 !important;
+    
+}
+
+.parterns{
+    display: flex;
+    justify-content:space-between;
+    height: 700px;
+
+}
+
+.partimg{
+    width: 400px;
+    height: 400px;
+    border-radius: 30px;
+    border: #FFD700 solid 1px;
+}
+
+#hidden{
+    display: none;
+}
+
+#borders{
+    background-color: black; border: #9b0d27 solid 1px; border-radius: 10px; opacity: 0.5;
+}
+
+#borders:hover{
+    background-color: black; border: #9b0d27 solid 1px; border-radius: 10px; opacity: 1;
+}
+
+#partners{
+    background-color: black;
+}
+
+
+#zooming{
+    transition: transform .5s ease;
+}
+
+#zooming:hover {
+    transform: scale(1.1);
+    box-shadow: #9b0d27 0px 0px 10px;
+}
+
+#jwells{
+    border: none !important;;
+}
+
+#colours{
+    color: #FFD700 !important;
+}
+
+#form_borders{
+    border: none !important;
+    background-color: black;
+}
+
+.form_borders{
+    border: none !important;
+    background-color: black;
+}

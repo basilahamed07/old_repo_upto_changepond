@@ -1,0 +1,257 @@
+   
+
+node -v
+npm -v 
+tsc -v  or npx tsc -v 
+
+//to install angular
+npm i -g @angular/cli 
+
+// it will show angular version 
+ng v    
+
+//create angular project 
+step1: ng new --no-standalone projectname 
+step2:cd projectname 
+step3:code .(press enterkey)
+step4:ng serve -o    // this will start angular project in development mode and 
+                      display output on browser on localhost:4200 
+
+
+*Angular : -it is application designing and developement platform for creating 
+           efficient and sofisticated single page application.
+          -angular work on component and modules 
+
+*Component:
+-it is partial part of angular app
+-it can can be any part of application which we can reuse multiple time.
+
+Note: in angular App is root component 
+
+
+
+node_module:  all library or dependency will install in this folder.
+package.json:  it will keep entry of install all library or package.
+package-lock.json : it will hold detail information of install libray. 
+README.md : it will work like guide manual.
+gitignore: it is use to store file and folder to ignore while push data on github 
+
+*How to create component
+ng generate component componentName
+ng g c componentName
+
+ng g c components/databinding
+ng g c components/direvtive
+
+*how to display individual component view or output.
+-copy component selector name form its ts file and write selector name as tag where you want.
+
+
+*Databinding: access data from one file to another in same component
+1. interpolation {{}} : ts => html 
+2. property Binding []: ts => html (here we set attribute value)
+3. event Binding ()   : html => ts (here we call event)
+4. Two-way data Binding [()]: ts <=> html 
+ -to perform Two-way Databinding we use ngModel directory, but ngModel directory is not part of core angular
+ it is part of Forms modules ,so first we have to import Formsmodule in uour root module (app.module.ts).
+ then and only then we can use ngModel directory.
+
+
+ Task: create a component with name "toggleImg" in Task folder in which you have to toggle image on  single button click
+ 
+*Directives : it is use to perform dom manipulation(change dom layout) and change appearance and behaviour of dom element.
+1.structural Directives: it is use to change dom element layout
+                        -it is denoted by * symbol.
+                       -*ngIf: it will display dom element when it get true value otherwise not.
+                       -*ngFor: it is use to iterate or repeate dom element.
+                       -*ngSwitchCase: it is use to display dom element on choice        
+2.attribute Directive: it is use to change appearance and behaviour of dom element.
+                - ngStyle: it is use to apply css property conditionaly.
+                - ngClas:it is use to apply css classes conditionaly.
+3.Custome Directive : developer can write logic to create custome directive 
+                     -to create custome dorective we have command.
+                     ng generate directive directiveName
+
+
+
+ng-template : it is directive which is use to display dom element conditionaly.
+
+*Pipe : in angular pipe is use to tranform property without chnaging its orinal value.
+       -to use pipe we use | symbol 
+       -thare are three types of pipe 
+       1.inbuilt pipe : pipe provided by angular.
+       2.custome pipe: pipe developed by develoer for use in project
+       //how to create custome pipe 
+       ng generate pipe pipeName
+
+       3.thired party pipe : pipe developed by thired party vender 
+
+create component with name mypipe 
+ng g c components/mypipe
+
+ ng g pipe shared/customepipe/cube
+ ng g pipe shared/customepipe/square
+
+ *how to use bootstrap in angular 
+  step1: install bootstrap
+   npm i bootstrap
+step2: go to angular.json file and import bootstrap file path in style section 
+           "node_modules/bootstrap/dist/css/bootstrap.min.css"
+step3: terminate angular project and restart it 
+
+ng g c components/empDetails 
+
+*how to display array of object data in table by using *ngFor
+===================================================================
+14/6/24 
+
+*Routing: navigation of component.
+         -display component output or view by writting its path in browser url.
+         -Routing will display component output under <router-outlet> <router-outlet> directory.
+         -routing is array object containing property with value.
+         -in angular root routing module name is app-routing-module.ts 
+
+*types of routing 
+1.naming routing: we write component routing path in browser url to display component output
+2.default routing: display component output by default means , keep its path  value blanck in routing
+                    - try to keep default routing first in order.
+3.redirect routing: display component output by writting different path name.
+4.parameterize routing : passing parameter with path name to display component output 
+5.child routing : defing one routing inside another routing
+                 -for this in parent routing we have to use children property.
+                 -in parent routing component html file we  must write <router-outlet><router-outlet> 
+
+6.wildcard routing: display component output ,when user write wrong path in browser url.
+                    -in this we write * as value in routing path.
+                    -wildcard routing must last routing,router define below to it never work.
+
+angForm,rtf,utdf,pagenotfound,mainDashboard 
+
+ng g c components/angForm
+
+*how to navigate one component to another component by click on button.
+*how to create layout 
+
+*Form validation in angular 
+*In angular there are two ways to perform form validation.
+1. By using UTDF(User template Driven Form):
+-when we have to perform simple and small form validation in that case we use utdf.
+-in utdf validation code will in html file.
+-in this we use ngModel model directory.
+
+2. By using RTF(Reactive template Form) :
+-when we have write complex logic to perform form validation in that case we use rtf.
+-in rtf validation perform in ts file. 
+-to Rtf validation first we have to import ReactiveFormsModule in root module.
+-in rtf form validation we use two classes 
+ 1.FormGroup: it will hold call FormControl data in it as well as it tract status of form.
+ 2.FormControl: it will track status and validation of individual input control.
+
+
+step1: import ReactiveFormsModule in root module(app.module.ts) from FromsModule
+step2: import FormGroup and FormControl class in rtf component
+
+*Form validation with regular expression.
+
+*service: in angular service is special class with extra power.
+         -we can share data with multiple component.
+         -we can implement bussiness logic in it.
+         -we can perform external communication(fetch data from server).
+To create service 
+ng g service serviceName 
+
+*How to access service data into any component.
+-to access data from service to component for that in component constructor we have to create instance of service class then we can access service data into component.
+
+-creating service class instance in component constructor is called dependecy injection.
+
+ng g service shared/services/myService
+
+*How to create REST fake API 
+dummy server : json-server 
+npm i -g json-server 
+database : json database 
+-we create json database file 
+
+*How to upload db.json file on json-server 
+cd src/app/shared/database (press enter)
+json-server --watch -p 8888 db.json  (press enter)
+
+
+*to make request from service to server we have to create instance of HttpClient class in service .but HttpClient class is not part of core angular .it is part of HttpClientModule .
+for this first we have to import HttpClientModule in our root module. 
+
+ ng g service shared/services/databaseService
+
+*to make request from service  to server we have to create instance of HttpClient class in service constructor.
+
+ng g c crud/productDashboard
+
+*here we make get request successfully
+====================================================
+17/6/24
+
+*use of concurrently library.
+step1:npm i -g concurrently 
+step2 : in package.json file 
+"json-server":"cd src/app/shared/database && json-server --watch -p 8888 db.json",
+"start-dev": "concurrently \"ng s --o\" \"npm run json-server\"",
+
+step3: terminate or restatrt angular project
+step4: npm run start-dev  
+
+*display server data into table 
+*use of font-awesome 
+ step1:npm i font-awesome 
+step2: in angular.jin file in style arrray write 
+       "font-awesome/css/font-awesom.min.css",
+
+step3: restart angular project 
+step4: copy icon cody from font-awesome official 
+       website and paste it in angular project       
+
+*delete request 
+
+*post request 
+ng g c crud/productAdd
+
+*Use of Router class object ot perform automatic navigation 
+*How to perform edit operation 
+ng g c crud/productUpdate
+
+
+*Angular Material : it provide inbuile UI Component for angular application.
+https://material.angular.io/
+
+*how to use Angular material 
+step1: ng add @angular/material
+step2 : restart angular project 
+step3: import angular material component in root module .
+
+*Guard : it prevent to display component view or output.
+ng g guard guardName 
+
+ng g guard shared/Guards/auth 
+      
+Login Module Done    
+*I tell logout logic to implete i given idea 
+
+
+===================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

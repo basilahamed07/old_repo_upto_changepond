@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String operaction</title>
+    
+</head>
+<body>
+    <div id="d1"></div> <br> <hr>
+    <div id="d2"></div> <br> <hr>
+    <div id="d3"></div> <br> <hr>
+    <div id="d4"></div> <br> <hr>
+    <div id="d5"></div> <br> <hr>
+    <div id="d6"></div> <br> <hr>
+    <div id="d7"></div> <br> <hr>
+    <div id="d8"></div> <br> <hr>
+    <div id="d9"></div> <br> <hr>
+    <div id="d10"></div> <br> <hr>
+    <div id="d11"></div> <br> <hr>
+    <div id="d12"></div> <br> <hr>
+    <div id="d13"></div> <br> <hr>
+    <div id="d14"></div> <br> <hr>
+    <div id="d15"></div>
+    
+    <script>    
+
+        let messages = "i am gland happy with my friends and family happy member And i am very exicted to share my experiance"
+
+        //strings and its method like (touppercase, tolowercase, length)
+        document.getElementById("d1").innerHTML = `display the string = `,messages
+        document.getElementById("d2").innerHTML = `display the strinh in upper case = `,messages.toUpperCase()
+        document.getElementById("d3").innerHTML = `display the string in lower case = `,messages.toLowerCase()
+        document.getElementById("d4").innerHTML = `display the string lenngth`,messages.length
+
+        // sstring and this methoid like indexof , lastindexof , search 
+        document.getElementById("d5").innerHTML = messages.indexOf("happy")   // by using the indexOf
+        document.getElementById("d6").innerHTML = messages.lastIndexOf("happy") // by using the lastIndexOf
+        document.getElementById("d7").innerHTML = messages.search("very") // by usinge the search method
+
+        // string use of slice method
+        document.getElementById("d8").innerHTML = messages.slice(65) // by using the slice method by supporthibg both intiger like (negative and positive)
+        document.getElementById("d9").innerHTML = messages.substring(42,5) // onlyu supported postive numbers only
+        document.getElementById("d10").innerHTML = messages.substr(42,5) // same as the substring
+        
+        // convercting the string to array
+        document.getElementById("d11").innerHTML = messages.split(" ") // by using the splite we ccan convert the string into array
+
+        // replace the pirtucular wrod into anothe wod
+        document.getElementById("d12").innerHTML = messages.replace("happy","Bad") // by using the replace method
+        document.getElementById("d13").innerHTML = messages.replaceAll("and","Fine") // by using the replaceall method convert the anbd character to fine
+        document.getElementById("d14").innerHTML = messages.replace(/and/ig,"hello") // by using the replace by epxression
+
+        // charAt method is used to 
+        document.getElementById("d15").innerHTML = messages.charAt(0)
+    </script>
+</body>
+</html>

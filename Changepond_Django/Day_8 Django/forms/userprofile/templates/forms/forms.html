@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+{% block title %}{% endblock title %}
+{% block content %}
+<div class="form-container">
+    
+    <label>Sample forms</label>
+    <form  method='POST' novalidate>
+        {% csrf_token %}
+        {% for trash in form  %}
+        {% if trash.user_name_2.errors %}errors
+
+
+    
+        {{ trash.label_tag }}<br>
+        {{form.errors}}
+        {{ trash.error }}<br>
+        {% endif %} 
+        {% endfor %}
+        {{form}}
+      
+
+
+     
+       
+      <input type="submit" placeholder="send" value="Send record"> 
+
+</div>
+</div>
+
+{% endblock content %}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <form action = '/' method='POST'>
+            {% csrf_token %}
+{% comment %} {% if form.user_name.errors %}errors{% endif %} {% endcomment %}
+{% for field in form  %}
+        {{ field.label_tag }}
+        {{ field}}
+       {% comment %} {{ field.errors }} {% endcomment %}
+       {% endfor %}
+<button>Send</button>
+        </form>
+    </body>
+</html>

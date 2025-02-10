@@ -1,0 +1,18 @@
+
+
+{% extends "base.html" %}
+{% block title %}Image form{% endblock title %}
+{% block content %}
+<div class="h-100 d-flex align-items-center justify-content-center">
+<div class="form-container container center">
+<form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form}}
+    <button type="submit">Image Send</button>
+</form>
+</div>
+</div>
+
+
+{% endblock content %}
+{% comment %} get the input from the user for post {% endcomment %}

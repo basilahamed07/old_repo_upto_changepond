@@ -1,0 +1,44 @@
+
+<form  [formGroup]="userForm" (ngSubmit)="getData()">
+    <div class="form-group">
+        <label class="form-label">Enter Your Name:</label>
+        <input type="text" name="fname" formControlName="fname" class="form-control">
+        <div class="alert alert-danger" *ngIf="userForm.get('fname').touched && 
+        userForm.get('fname').invalid">
+            <div *ngIf="userForm.get('fname').errors.required">this fiels is required</div>
+            <div *ngIf="userForm.get('fname').errors.pattern">fname must contain only character min-3 and max-20</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="form-label">Enter Your Password:</label>
+        <input type="text" name="upass" formControlName="upass" class="form-control">
+        <div class="alert alert-danger" *ngIf="userForm.get('upass').touched && 
+        userForm.get('upass').invalid">
+            <div *ngIf="userForm.get('upass').errors.required">this fiels is required</div>
+            <div *ngIf="userForm.get('upass').errors.pattern">user password must in proper formate</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="form-label">Enter Your Email:</label>
+        <input type="text" name="uemail" formControlName="uemail" class="form-control">
+        <div class="alert alert-danger" *ngIf="userForm.get('uemail').touched && 
+        userForm.get('uemail').invalid">
+            <div *ngIf="userForm.get('uemail').errors.required">this fiels is required</div>
+            <div *ngIf="userForm.get('uemail').errors.pattern">user email must in proper formate</div>
+        </div>
+    </div>
+    <div class="form-group">
+        <label class="form-check-label">
+            <input type="checkbox" name="term" formControlName="term" class="form-check-input">
+            Accept Term And Condition.
+        </label>
+       
+        <div class="alert alert-danger" *ngIf="userForm.get('term').touched && 
+        userForm.get('term').invalid">
+            <div *ngIf="userForm.get('uemail').errors.required">this fiels is required</div>
+        </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-2" [disabled]="userForm.invalid">Submit</button>
+
+</form>

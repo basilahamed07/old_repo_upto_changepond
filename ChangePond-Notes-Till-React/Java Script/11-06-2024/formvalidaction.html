@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        function checkAll(){
+            let ufame = document.myform.ufame.value;
+            let regfname = "^[a-zA-Z]{3,15}$";
+
+            let uedu = document.myform.edu;
+            if(ufame.trim()==""){
+                windows.alert("this fied is request")
+                return false
+            }
+
+            if(!ufame.trim().match(regfname)){
+                window.alert("user must enter the at least 3 ton 15 chsaracters")
+                return false
+            }
+            if(uedu[0].checked==false && uedu[1].checked==false && uedu[2].checked==false && uedu[3].checked==false && uedu[4].checked==false){
+                window.alert("please select your qualification")
+                return false;
+            }
+        }
+
+    </script>
+
+
+
+</head>
+<body>
+    <div style="display: flex; justify-content: center; align-items: center; height: 100vh; width: 100%;"> 
+    <form style="border: 4px solid violet; padding: 40px; box-shadow: 10px 10px 20px ;"  name="myform" onsubmit="return checkAll()">
+        <label for="fname"><b>Enter the first name:</b></label><br>
+        <input type="text" name="fname" id="ufame"><br><br>
+        <input type="checkbox" name="edu" value="ssc">SSLC
+        <input type="checkbox" name="edu" value="hsc">HSC
+        <input type="checkbox" name="edu" value="ug">UG
+        <input type="checkbox" name="edu" value="pg">PG
+        <input type="checkbox" name="edu" value="master">MASTER
+                <button type="submit">Submit</button><br>
+    </form>
+</div>
+</body>
+</html>

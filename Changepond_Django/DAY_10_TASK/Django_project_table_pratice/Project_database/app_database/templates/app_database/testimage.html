@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}testimage{% endblock title %}
+{% block contents %}
+<form action="thankyou" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form}}
+    <button type = "submit">Send</button>
+</form>
+{% endblock contents %}

@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+<ul>
+    {% for trash in reviews %}
+    <li>{{trash.user_name}}</li>
+    {% endfor %}
+</ul>
+{% endblock content %}

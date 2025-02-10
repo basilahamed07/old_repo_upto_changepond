@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+        <h1 id="colourchage">text colour will be changes</h1>
+        <h1 id="colorcaheg for bg">change the colour for bg</h1>
+        <hr id="line">
+
+        <h1>Here we creating the form</h1>
+        <form action="">
+            <label for="numbers1">Enter the first number</label>
+            <input type="text" placeholder="enter the number here" id="num1">
+            <label for="number2">Enter the second number</label>
+            <input type="text" placeholder="enter the number" id="num2">
+            <button>Submit</button>
+            <br><br><br>
+            <hr>
+        </form>
+        <script>
+            function welcone(std1){
+                return "welcone you" +std1;
+            }
+    
+            document.write(welcone(" basil ahamed "),"<hr>")
+    
+    
+            function heresomthing(std1,std2,std3){
+                return `hello how are you all ${std1} ${std2} ${std3}`
+            }
+            var std1 = "basil" 
+            var std2 = "ahamed"
+            var std3 =  "how are you"
+    
+            document.write(heresomthing(std1,std2,std3),"<hr><br> <br> ");
+
+            // change the text colcor
+
+            document.getElementById("colourchage").style.color="blue";
+            document.getElementById("line").style.borderColor="green";
+            // change the colour backgroub here
+            document.getElementById("colorcaheg for bg").style.backgroundColor="yellow";
+            document.getElementById("line").style.borderColor="green";
+
+            // 3. by using the anonimous function
+
+
+            let a = function (){
+                return num1+num2
+            }
+
+            let num1 = 22
+            let num2 = 4324
+
+            document.write(a(num1,num2),"<br>")
+
+            // 4. by using the arrow function
+
+
+            let arrows = (num1,num2) => num1*num2;
+            document.write(arrows(num1,num2),"<br> <hr>")
+
+
+            let tsi = ()=>{
+                return 100 *100
+            }
+            document.write(tsi(),"<br> <hr>")
+
+            //5.by using the optional parameters
+
+            let anonymousss = function (names, here, first="none"){
+                return `first name = ${names},<br>second name ${here}, <br> thard name = ${first}`
+            }
+
+            document.write(anonymousss("basil","ahamed"),"<br> <hr>")
+            document.write(anonymousss("basil","ahamed","h","<br> <hr>"))
+            document.write(anonymousss("basil","ahamed"),"<br> <hr>")
+            document.write(anonymousss("basil","ahamed"),"<br> <hr>")
+            document.write(anonymousss("basil","ahamed"),"<br> <hr>")
+            document.write(anonymousss("basil","ahamed"),"<br> <hr>")
+            // 6.rest parameterize function :
+            //         when we don't know how many parameters are required in function in that caus we use it . in this we use sperad operatoe(...)
+
+            let rest = (...stdss) =>{
+                return stdss
+            }
+
+            document.write(rest("hwllo","fine","here"),"<br> <hr>")
+        </script>
+
+    
+
+
+</body>
+</html>

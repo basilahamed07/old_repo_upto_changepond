@@ -1,0 +1,37 @@
+*{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+#id{
+    color: red;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 40px;
+    font-weight: 900;
+    text-decoration:overline;
+}
+
+h2{
+    color: white;
+    background-color: black;
+}
+
+p,h3,h4{
+    color: green;
+    font-weight: 300;
+}
+
+.con{
+    background-color: darkred;
+    color: white;
+    text-align: center;
+    text-transform: capitalize;
+    text-decoration: line-through;
+    
+}
+
+
+.container{
+    border: 1px solid green;
+    border-radius: 30px;
+    border-width: 10px 20px 20px 20px;
+}

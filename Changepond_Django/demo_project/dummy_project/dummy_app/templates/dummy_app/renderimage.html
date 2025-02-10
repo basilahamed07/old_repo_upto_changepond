@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+<ul> 
+    <div class="mt-5 text-center">
+
+    {% for trash in image_render %}
+    <img src="{{trash.image.url}}" alt="Placeholder Image" class="img-fluid shadow-lg animate-shadow">
+    {% endfor %}
+    </div>
+</ul>
+{% endblock  %}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            height: 500px;
+            width: 700px;
+        }
+    </style>
+</head>
+<body>
+    <div id="one">
+    <img id="changeuimage" src="https://static.toiimg.com/thumb/msid-53891743,width-748,height-499,resizemode=4,imgsize-152022/Tour-Eiffel.jpg" alt="" >
+</div>
+    <strong id="change">dosas</strong>
+    <button type="button" onclick="changeimnage()">Change image</button>
+
+<script>
+    function changeimnage(){
+
+        let one = document.getElementById("change").innerHTML
+        console.log(one)
+        
+        if( one == "dosas"){
+            document.getElementById("changeuimage").src="https://i.ebayimg.com/images/g/mrQAAOSww5Rj9PFp/s-l1200.jpg"
+            document.getElementById("change").innerHTML = "lion"
+        }
+
+        else if(one == "lion"){
+             document.getElementById("changeuimage").src="https://static.toiimg.com/thumb/msid-53891743,width-748,height-499,resizemode=4,imgsize-152022/Tour-Eiffel.jpg"
+             document.getElementById("change").innerHTML = "dosas"
+        }
+        
+        
+       
+    }
+</script>
+
+
+</body>
+</html>

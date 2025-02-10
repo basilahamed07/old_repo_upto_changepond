@@ -1,0 +1,9 @@
+<div class="card-group">
+    <div class="card" *ngFor="let trash of item">
+        <img [src]="trash.photo" alt="">
+        <div class="card-body">
+            <h2 class="card-title">{{trash.name}}</h2>
+            <p class="card-text">{{trash.price}}</p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+<p>clickcontent works!</p>
+
+
+
+<div class="container">
+<button (click)="Bikes()">Bikes</button> &nbsp;&nbsp;
+<button (click)="carss()">Cars</button>
+
+<div *ngIf="bike then bikesss "></div>
+<div *ngIf="car then carsss"></div>
+
+<ng-template #bikesss>
+    <ul>
+        <li *ngFor="let trash of bikess" (click) = "clickingbutton(trash)"><button class="btn">{{trash}}</button></li>
+    </ul>
+</ng-template>
+
+<ng-template #carsss>
+    <ul>
+        <li *ngFor="let trash of cars" (click) = "clickingbutton(trash)"><button class="btn">{{trash}}</button></li>
+    </ul>
+</ng-template>
+
+</div>
+
+
+<h1 *ngIf="data_here">Your Select this  {{data_here}}</h1>
+

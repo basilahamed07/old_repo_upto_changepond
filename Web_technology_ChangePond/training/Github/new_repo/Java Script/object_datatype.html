@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+    <script>
+        //object datatype here we have
+
+        details = {
+            name : "basil ahamed",
+            id:443,
+            contact:32454535,
+            single:false,
+            address:{
+                city:"chennai",
+                pin:6542543,
+                state:"tamil nadu"
+            },
+            anonimousname: function(){
+                return `id=${this.id}, name=${this.name}, contact=${this.contact}, address= ${this.address.city} <br>`
+            },
+            second: function() {
+                return `id=${details.id}, name=${details.name}, contact=${details.contact}, address= ${details.address.city}<br> `
+            }    
+        }
+            
+            
+            
+        document.write(details.anonimousname())
+        document.write(details.second())
+        document.write(`NAME= ${details.name} <br>`)
+        document.write(`city= ${details.address.city}`)
+        
+    </script>
+</body>
+</html> 

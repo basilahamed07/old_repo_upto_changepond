@@ -1,0 +1,74 @@
+
+
+{% comment %} Landing Page Contents {% endcomment %}
+
+<div class="container" id="custom-cards">
+<div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-3 py-3">
+  {% for trash in data %}
+    <div class="col">
+      <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('{{trash.post_pics.url}}');">
+        <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+          <div class="pt-5 mt-5 mb-4 pb-4 display-6 lh-1 fw-bold text-success">{{trash.title}}</div>
+      
+          
+          {% comment %} for models method {% endcomment %}
+ <!-- Button trigger modal -->
+ 
+{% comment %} <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#{{trash.slug}}">
+  {{trash.slug}}
+</button> 
+  {% endcomment %}
+<a href="{% url "details-slug" trash.slug %}"><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#{{trash.slug}}">
+  Know More
+</button></a>
+
+
+
+
+
+{% comment %} #by using the slug we can perform the models method {% endcomment %}
+<!-- Modal -->
+{% comment %} <div class="modal fade" id="{{trash.slug}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <b class="modal-title" id="exampleModalLabel">{{trash.title}}</b>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body bg-danger">
+        <h1>{{trash.description}}</h1>
+        <h1>{{trash.day}}</h1>
+        <h1>{{trash.time}}</h1>
+        <h1>{{trash.starts}}</h1>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div> {% endcomment %}
+{% comment %} </div> {% endcomment %}
+
+
+
+
+
+
+
+        </div>
+      </div>
+    </div>
+    
+    {% endfor %}
+
+  </div>
+
+ {% comment %} bottom all post tages  {% endcomment %}
+
+
+<!--for all-post page -->
+
+
+
+
+

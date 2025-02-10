@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .df { display: flex; }
+        .aic { align-items: center; }
+        .jcc { justify-content: center; }
+        .loader { height: 100vh; }
+        .demo-wrapper { padding: 20px; }
+        .demo-text, .demo-gallery { margin: 20px 0; }
+        .wrapper { max-width: 1240px; margin: 0 auto; }
+        .wrapper.text { font-size: 24px; }
+        .demo-gallery ul { list-style: none; padding: 0; }
+        .demo-gallery li { margin: 10px 0; }
+    </style>
+</head>
+<body>
+    <!-- <div class="loader df aic jcc">
+        <div>
+            <h1>Loading</h1>
+            <h2 class="loader--text">0%</h2>
+        </div>
+    </div> -->
+
+    <div class="demo-wrapper">
+        <header class="df aic jcc">
+            <div>
+                <h1>ScrollTrigger</h1>
+                <h2>demo</h2>
+            </div>
+        </header>
+
+        <section class="demo-text">
+            <div class="wrapper text">
+                ABCDEFGHIJKLMNOPQRSTUVWXYZ
+            </div>
+        </section>
+
+        <!-- The number of galleries can be from 1 to 4 -->
+        <!-- Example with 2 galleries for demonstration -->
+        <section class="demo-gallery">
+            <ul class="wrapper">
+                <li>
+                    <img src="https://source.unsplash.com/random/1240x874?sig=123" width="1240" height="874" alt="Random Image">
+                </li>
+                <li>
+                    <img src="https://source.unsplash.com/random/1240x874?sig=456" width="1240" height="874" alt="Random Image">
+                </li>
+            </ul>
+        </section>
+
+        <section class="demo-gallery">
+            <ul class="wrapper">
+                <li>
+                    <img src="https://source.unsplash.com/random/1240x874?sig=789" width="1240" height="874" alt="Random Image">
+                </li>
+                <li>
+                    <img src="https://source.unsplash.com/random/1240x874?sig=101" width="1240" height="874" alt="Random Image">
+                </li>
+                <li>
+                    <img src="https://source.unsplash.com/random/1240x874?sig=112" width="1240" height="874" alt="Random Image">
+                </li>
+            </ul>
+        </section>
+
+        <section class="demo-text">
+            <div class="wrapper text">
+                ABCDEFGHIJKLMNOPQRSTUVWXYZ
+            </div>
+        </section>
+
+        <footer class="df aic jcc">
+            <p>Images from <a href="https://unsplash.com/">Unsplash</a></p>
+        </footer>
+    </div>
+</body>
+</html>

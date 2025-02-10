@@ -1,0 +1,49 @@
+
+
+
+{% extends "base.html" %}
+{% block title %}{{post.title}}{% endblock  %}
+{% block css %}{% endblock  %}
+
+{% block content %}  
+{% comment %} <div class="container">
+    <h1>Post Image</h1>
+    <img src="{{data.image.url}}" class="img-fluid" alt="Wild Landscape" />
+
+</div>
+
+<div class="container">
+    <h1>Detail</h1>
+    <h3>{{data.title}}</h3>
+    <h3>{{data.image_name}}</h3>
+    <h3>{{data.content}}</h3>
+</div> {% endcomment %}
+
+<div class="container my-5">
+    <div class="row">
+      <div class="col-lg-6">
+        <img class="w-75 h-75 shadow" src="{{data.image.url}}" />
+      </div>
+      <div class="col-lg-6">
+        <div class="p-5 mt-4">
+            <h1 class="display-4">Details</h1><br/>
+            <p class="lead"><b>Title :</b>{{data.title}}</h1>
+            <p class="lead"><b>Image_name:</b> {{data.image_name}}</p>
+            <p class="lead"><b>content :</b>{{data.content}}</p>
+            <p class="lead"><b>Date :</b>{{data.date}}</p>
+            <p class="lead"><b>Date :</b>{{data.time}}</p>
+            <p class="lead"><b>Author :</b>{{data.author}}</p>
+            
+            <h1 class="display-4">Commands</h1><br/>
+            <ul>
+                {% for trash in command %}
+                <li>{{trash.user_name}} command : {{trash.text}}</li>
+                {% endfor %}
+            <ul>
+          </div>
+      </div>
+  </div>
+
+
+{% endblock content %} 
+{% comment %} containng the post details like full details of the user or card {% endcomment %}

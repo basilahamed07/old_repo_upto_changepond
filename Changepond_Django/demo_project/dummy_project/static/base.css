@@ -1,0 +1,42 @@
+/* Add shadow effects and animations */
+
+body{
+    color: black;
+    background-color: black !important;
+}
+.animate-shadow {
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.animate-shadow:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.shadow-lg {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3) !important;
+}
+
+.form-control {
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
+}
+
+img {
+    border-radius: 30px;
+    box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.25);
+    padding: 10px;
+    margin-top: 20px;
+    transition: scale 2s !important
+}
+img:hover{
+    background-color: red;
+    scale: 1.1;
+}
+/* Optional: Add some padding and border-radius for form */
+form {
+    border-radius: 8px;
+    scale: 1.05;
+}

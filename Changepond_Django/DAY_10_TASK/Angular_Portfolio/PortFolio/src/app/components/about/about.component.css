@@ -1,0 +1,26 @@
+/* home.component.css and about.component.css */
+.section {
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  #section1 {
+    background-color: #f7f7f7;
+  }
+  
+  #section2 {
+    background-color: #e0e0e0;
+  }
+
+  .cursor {
+    position: fixed;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
+    pointer-events: none; /* Prevents the cursor from blocking other elements */
+    transform: translate(-50%, -50%);
+  }

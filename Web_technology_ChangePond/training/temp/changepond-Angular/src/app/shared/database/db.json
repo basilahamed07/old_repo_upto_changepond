@@ -1,0 +1,51 @@
+{
+  "product": [
+    {
+      "pname": "Laptop",
+      "price": "454564564",
+      "company": "BASil",
+      "id": "1"
+    },
+    {
+      "id": "2",
+      "pname": "Adaptor",
+      "price": 3000,
+      "company": "HP"
+    },
+    {
+      "id": "4",
+      "pname": "USB",
+      "price": 2000,
+      "company": "Dell"
+    },
+    {
+      "pname": "Iphone",
+      "price": "350000",
+      "company": "Apple",
+      "id": "5"
+    },
+    {
+      "id": "e4bc",
+      "pname": "helllo",
+      "price": "3243434",
+      "company": "wfagdfg"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "uname": "admin@gmail.com",
+      "upass": "admin@123"
+    },
+    {
+      "id": "2",
+      "uname": "hero@gmail.com",
+      "upass": "hero@123"
+    },
+    {
+      "id": "3",
+      "uname": "king@gmail.com",
+      "upass": "king@123"
+    }
+  ]
+}

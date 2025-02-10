@@ -1,0 +1,54 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+
+    
+    .container {
+        margin-top: 30px;
+        width: 308px;
+        height: 408px;
+        display: grid;
+        place-items: center;
+        background: linear-gradient(135deg, #6380ff, #ff2212);
+        border-radius: 8px;
+        opacity: 0;
+        rotate: z -90deg;
+        animation: rotate-fade-in 640ms cubic-bezier(.29,-0.01,.39,1.31) forwards 800ms;
+                
+        > img {
+            $width: 300px;
+            $initial-mask: $width center, calc(#{$width} * -1) center;
+            object-fit: cover;
+            height: 400px;
+            width: $width;
+            border-radius: inherit;
+            box-shadow: 2px 2px 4px #b1b1b1;
+            mask-origin: border-box;
+            mask-mode: alpha;
+            mask-image: linear-gradient(to bottom, transparent 50%, black 50%),
+                        linear-gradient(to top, transparent 50%, black 50%);
+            mask-position: $initial-mask;
+            animation: mask-animation 800ms ease forwards 1s;
+            mask-repeat: no-repeat;
+            
+            @keyframes mask-animation {
+                from {
+                    mask-position: $initial-mask;
+                }
+
+                to {
+                    mask-position: center 0px, center 0px;
+                }            
+            }
+        }    
+        
+        @keyframes rotate-fade-in {
+            to {
+                rotate: z 0deg;
+                opacity: 1;
+            }
+        }
+    }

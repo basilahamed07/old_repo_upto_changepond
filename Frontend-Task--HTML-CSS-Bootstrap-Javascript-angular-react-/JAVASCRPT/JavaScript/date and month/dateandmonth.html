@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="result"></h1>
+    <script>
+        let date = new Date();
+        document.write(`<h1> ${date} </h1>`)
+        document.write(`<h1> ${date.getFullYear()} </h1>`)
+        document.write(`<h1> ${date.getDate()} </h1>`)
+        document.write(`<h1> ${date.getHours()} </h1>`)
+        document.write(`<h1> ${date.getMilliseconds()} </h1>`)
+        
+        day_finder = date.getDay();
+        day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+        document.write(`<h1> Today is = ${day[day_finder]}</h1>`)
+        month = ["January", "February", "March", "April", "May", "june", "September", "October", "November", "December"]
+        month_finder = date.getMonth()
+        document.write(`<h1> Month is = ${month[month_finder]}</h1>`)
+    </script>
+</body>
+</html>

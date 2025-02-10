@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form validaction</title>
+    <style>
+        body{
+            background: url("https://cdn.dribbble.com/users/189524/screenshots/2103470/01-black-cat_800x600_v1.gif");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .container{
+            display: flex;
+            height: 100vh;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+        .login-box{
+            padding: 40px;
+            width: 500px;
+            border: 3px solid yellow;
+            border: 20px;
+            box-shadow: 10px 10px 20px;
+            background: transparent;
+            backdrop-filter: blur(10px);
+        }
+        input{
+            width: 400px;
+            height: 50px;
+            border: 2px solid black;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            outline: none;
+        }
+        label{
+            font-size: 20px;
+            font-weight: bold;
+            margin: 10px;
+            color: white;
+        }
+        span{
+            font-size: 20px;
+            font-weight: bold;
+            margin: 10px;
+            color: red;
+        }
+        button{
+            width: 100px;
+            height: 50px;
+            border: none;
+            border-radius: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+            <form action="">
+            <label for="name">Enter the user name</label>
+            <input type="text" id="username" onblur=validaction()><br>
+            <span id="spanu"></span><br>
+            <label for="name">Enter the password</label>
+            <input type="text" id="pass" onblur="validpassword()"><br><br>
+            <span id="spanp"></span>
+            <center>
+            <button type="submit">Login</button>
+        </center>
+    </form>
+        </div>
+    </div>
+    <script>
+        function validaction(){
+            let username = document.getElementById("username").value
+            if (username.trim()===""){
+                document.getElementById("spanu").innerHTML = "Please enter a username"
+                document.getElementById("spanu").style.color = "red"
+            }
+            else if (!username.trim().match("^[a-zA-Z]{3,20}$")){
+                document.getElementById("spanu").innerHTML = "please enter a alpahabate and between 3 to 20 characters"
+                document.getElementById("spanu").style.color = "red"
+            }
+            else{
+                document.getElementById("spanu").innerHTML = ""
+            }
+
+        }
+
+        function validpassword(){
+            let username = document.getElementById("pass").value
+            if (username.trim()===""){
+                document.getElementById("spanp").innerHTML = "please Enter the password"
+                document.getElementById("spanp").style.color = "red"
+            }
+            else if (!username.trim().match("[a-zA-Z@!@#$%^&*()0-9]{8,20}$")){
+                document.getElementById("spanp").innerHTML = "not pass the password validaction"
+                document.getElementById("spanp").style.color = "red"
+            }
+            else{
+                document.getElementById("spanp").innerHTML = ""
+            }
+
+        }
+    </script>
+</body>
+</html>

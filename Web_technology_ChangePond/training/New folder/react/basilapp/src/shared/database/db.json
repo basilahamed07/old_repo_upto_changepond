@@ -1,0 +1,68 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "panme": "Laptop",
+      "Prince": 43522,
+      "company": "HP",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwvhgJA4wsFwlwNSSm23O8bfCBq7wLdq1WEQ&s"
+    },
+    {
+      "id": "2",
+      "panme": "desktop",
+      "Prince": 43522,
+      "company": "HP",
+      "img": "https://static.digit.in/default/untitled-design-5-e8f2925747.jpeg"
+    },
+    {
+      "id": "3",
+      "panme": "Laptop",
+      "Prince": 43522,
+      "company": "Razer",
+      "img": "https://5.imimg.com/data5/SELLER/Default/2021/11/UR/RS/KO/11078779/3-500x500.PNG"
+    },
+    {
+      "id": "6",
+      "panme": "Laptop",
+      "Prince": 43522,
+      "company": "Sony",
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9q8CgTYZm85iZ69b9VRcf5IqQ5Tw15VPTlg&s"
+    },
+    {
+      "id": "7",
+      "panme": "Laptop",
+      "Prince": 43522,
+      "company": "Msi",
+      "img": "https://asset.msi.com/resize/image/global/product/product_17035046674023a211767f3af074d5b9f843f5f9e1.png62405b38c58fe0f07fcef2367d8a9ba1/400.png"
+    },
+    {
+      "id": "db67",
+      "panme": "iphone 16 pro max",
+      "Prince": "160000",
+      "company": "Apple",
+      "img": "https://5.imimg.com/data5/SELLER/Default/2021/9/DH/UC/UV/18726985/apple-iphone-mobile.png"
+    }
+  ],
+  "user": [
+    {
+      "id": "1",
+      "userId": "admin@gmail.com",
+      "userpass": "admin@123"
+    },
+    {
+      "id": "1",
+      "userId": "basil@gmail.com",
+      "userpass": "basil@123"
+    },
+    {
+      "id": "1",
+      "userId": "ahamed@gmail.com",
+      "userpass": "ahamed@123"
+    },
+    {
+      "id": "1",
+      "userId": "favez@gmail.com",
+      "userpass": "farvez@123"
+    }
+  ]
+}

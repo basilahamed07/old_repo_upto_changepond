@@ -1,0 +1,33 @@
+<br><br><br><br>
+<div class="flex flex-wrap justify-center">
+    <div *ngFor="let product of cardData">
+        <div class="card" *ngIf="product.P_Brand === 'oils'">
+            <div class="w-[300px] shadow-lg rounded-lg bg-neutral-50 p-4 m-4">
+                <img [src]="product.P_image" alt="Product Image" class="w-full h-[200px] object-cover rounded-md"/>
+                <div class="mt-4">
+                    <h2 class="font-title text-lg font-semibold">{{ product.P_Name }}</h2>
+                    <!-- <p class="mt-2 text-sm text-neutral-700">A brief description of the product that highlights its features and benefits.</p> -->
+                </div>
+
+                <div class="quantity-controls mt-4 flex justify-between items-center border border-gray-300 rounded-md overflow-hidden">
+                    <button class="quantity-button bg-blue-500 text-white p-2 hover:bg-blue-600 transition duration-200" (click)="updateQuantity(product, -1)">-</button>
+                    <input type="number" [(ngModel)]="product.quantity" class="quantity-input w-16 text-center border-none outline-none" min="1"/>
+                    <button class="quantity-button bg-blue-500 text-white p-2 hover:bg-blue-600 transition duration-200" (click)="updateQuantity(product, 1)">+</button>
+                </div>
+
+                <div class="mt-4 flex justify-between items-center">
+                    <span class="text-lg font-semibold">${{ product.P_Price }}</span>
+                    <button (click)="addToCart(product)" class="bg-green-500 rounded-md text-white py-2 px-4 hover:bg-green-600 transition duration-200">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Pop up modal -->
+<div class="modal" *ngIf="showSuccessPopup">
+    <div class="modal-content bg-white p-4 rounded-lg shadow-lg">
+        <span class="close cursor-pointer text-xl" (click)="closePopup()">&times;</span>
+        <p>Product added successfully!</p>
+    </div>
+</div>

@@ -1,0 +1,104 @@
+   
+
+node -v
+npm -v 
+tsc -v  or npx tsc -v 
+
+//to install angular
+npm i -g @angular/cli 
+
+// it will show angular version 
+ng v    
+
+//create angular project 
+step1: ng new --no-standalone projectname 
+step2:cd projectname 
+step3:code .(press enterkey)
+step4:ng serve -o    // this will start angular project in development mode and 
+                      display output on browser on localhost:4200 
+
+
+*Angular : -it is application designing and developement platform for creating 
+           efficient and sofisticated single page application.
+          -angular work on component and modules 
+
+*Component:
+-it is partial part of angular app
+-it can can be any part of application which we can reuse multiple time.
+
+Note: in angular App is root component 
+
+
+
+node_module:  all library or dependency will install in this folder.
+package.json:  it will keep entry of install all library or package.
+package-lock.json : it will hold detail information of install libray. 
+README.md : it will work like guide manual.
+gitignore: it is use to store file and folder to ignore while push data on github 
+
+*How to create component
+ng generate component componentName
+ng g c componentName
+
+ng g c components/databinding
+ng g c components/direvtive
+
+*how to display individual component view or output.
+-copy component selector name form its ts file and write selector name as tag where you want.
+
+
+*Databinding: access data from one file to another in same component
+1. interpolation {{}} : ts => html 
+2. property Binding []: ts => html (here we set attribute value)
+3. event Binding ()   : html => ts (here we call event)
+4. Two-way data Binding [()]: ts <=> html 
+ -to perform Two-way Databinding we use ngModel directory, but ngModel directory is not part of core angular
+ it is part of Forms modules ,so first we have to import Formsmodule in uour root module (app.module.ts).
+ then and only then we can use ngModel directory.
+
+
+ Task: create a component with name "toggleImg" in Task folder in which you have to toggle image on  single button click
+ 
+*Directives : it is use to perform dom manipulation(change dom layout) and change appearance and behaviour of dom element.
+1.structural Directives: it is use to change dom element layout
+                        -it is denoted by * symbol.
+                       -*ngIf: it will display dom element when it get true value otherwise not.
+                       -*ngFor: it is use to iterate or repeate dom element.
+                       -*ngSwitchCase: it is use to display dom element on choice        
+2.attribute Directive: it is use to change appearance and behaviour of dom element.
+                - ngStyle: it is use to apply css property conditionaly.
+                - ngClas:it is use to apply css classes conditionaly.
+3.Custome Directive : developer can write logic to create custome directive 
+                     -to create custome dorective we have command.
+                     ng generate directive directiveName
+
+
+
+ng-template : it is directive which is use to display dom element conditionaly.
+
+*Pipe : in angular pipe is use to tranform property without chnaging its orinal value.
+       -to use pipe we use | symbol 
+       -thare are three types of pipe 
+       1.inbuilt pipe : pipe provided by angular.
+       2.custome pipe: pipe developed by develoer for use in project
+       //how to create custome pipe 
+       ng generate pipe pipeName
+
+       3.thired party pipe : pipe developed by thired party vender 
+
+create component with name mypipe 
+ng g c components/mypipe
+
+ ng g pipe shared/customepipe/cube
+ ng g pipe shared/customepipe/square
+
+ *how to use bootstrap in angular 
+  step1: install bootstrap
+   npm i bootstrap
+step2: go to angular.json file and import bootstrap file path in style section 
+           "node_modules/bootstrap/dist/css/bootstrap.min.css"
+step3: terminate angular project and restart it 
+
+ng g c components/empDetails 
+
+*how to display array of object data in table by using *ngFor

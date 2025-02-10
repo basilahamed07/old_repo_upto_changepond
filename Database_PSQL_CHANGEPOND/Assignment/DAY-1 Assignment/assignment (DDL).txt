@@ -1,0 +1,105 @@
+1)Write a SQL statement to create a simple table movies which should include columns movie_id, movie_name, movie_type and movie_rating only if it does not exist. The combination of movie_id and movie_name should be an unique indentifier of the table.
+
+ans = 
+    create table movie(
+    movie_id int PRIMARY KEY unique,
+    movie_name VARCHAR(50) unique,
+    movie_type VARCHAR(50),
+    movie_rating VARCHAR(50)
+);
+Query OK, 0 rows affected (0.31 sec)
+
+
+2) 2) Write a SQL statement to create a table company which should include columns company_id, trade, number_of_employees. The company_id should be an unique indentifier of the table. trade and number_of_employees columns should not be null. The number_of_employees should be 0 by default.
+
+ans = mysql> create table company(
+    ->     company_id int PRIMARY KEY unique,
+    ->     trade VARCHAR(50) not null,
+    ->     number_of_employees int not null default 0
+    -> );
+Query OK, 0 rows affected (0.25 sec)
+
+3)3) Write a SQL statement to create a table job_offer which should include columns offer_id, offer_title, offer_min_salary and offer_max_salary, company_id, and make sure that, the default value for job_offer_title is blank, offer_min_salary is 5000 and offer_max_salary is null. The offer_id column should be unique. The foreign key company_id can contain only those values which exist in the company table.
+
+mysql> create table job_offer(
+    ->     offer_id int PRIMARY KEY unique,
+    ->     offer_title VARCHAR(50) not null,
+    ->     offer_min_salary int default 5000,
+    ->     offer_max_salary int null,
+    ->     company_id int,
+    ->     job_offer_title VARCHAR(30) DEFAULT " ",
+    ->     foreign KEY (company_id)
+    ->     references company(company_id)
+    ->     on update restrict
+    -> on delete cascade
+    -> );
+Query OK, 0 rows affected (0.36 sec)
+
+
+4)#Write a SQL statement to rename the movies table to movies_renamed.
+
+ans = mysql> rename table movie to movies_renamed
+    -> ;
+Query OK, 0 rows affected (0.18 sec)
+
+
+5) Write a SQL statement to add a column movie_director to the movies_renamed table.
+
+
+== ans
+
+mysql> alter table movies_renamed
+    -> add column movie_director varchar(500);
+Query OK, 0 rows affected (0.08 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+6)Write a SQL statement to add a column ID as a first column of the movies_renamed table.
+
+== ans
+
+mysql> alter table movies_renamed
+    -> add column coloumn_ID int first;
+Query OK, 0 rows affected (0.10 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+7)Write a SQL statement to add a column movie_description after the movie_name column in movies_renamed table.
+
+mysql> alter table movies_renamed
+    -> add column movie_description VARCHAR(30) after movie_name;
+Query OK, 0 rows affected (0.04 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+
+
+8)Write a SQL statement to change the data type of the column movie_rating to integer.
+mysql>   alter TABLE movies_renamed
+    -> MODIFY column movie_rating int;
+Query OK, 0 rows affected (0.70 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+
+10)Write a SQL statement to drop the movie_director column.
+
+mysql>  alter TABLE movies_renamed
+    ->     drop column movie_director;
+Query OK, 0 rows affected (0.04 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+
+
+11)Write a SQL statement to drop the existing primary key from the movies_renamed table.
+
+mysql> alter TABLE movies_renamed
+    -> drop PRIMARY KEY
+    ->
+    ->
+    -> ;
+Query OK, 0 rows affected (0.40 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+
+12)Write a SQL statement to add primary key for the column movie_id in the movies_renamed table.
+
+
+alter TABLE movie_renamed
+alter column primary key(movie_id)

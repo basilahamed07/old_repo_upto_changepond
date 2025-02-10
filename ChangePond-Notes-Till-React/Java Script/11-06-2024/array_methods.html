@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+    <script>
+        let arr = ["basil", "ahamed", "good"]
+        arr.forEach((trash)=>{
+            document.write(trash ,"<br> ")
+        })
+
+        // by using the map condiction
+        arrays_num = [1,2,3,4,5,6,7,8,9,32,432,534,56,56,435643,5435,34534,543,543543,6546,456,34543,532454,43534,5435,423]
+        let final = arrays_num.map((valss) => {
+            return valss*12
+        })
+        document.write(final, "<br>")
+
+        //by usin the filter condictiojn
+        let filters = arrays_num.filter((val) =>{
+            return val %2 === 0
+        })
+        document.write(filters,"<br>")
+
+        //by using the every function only return the bool values
+
+        let everys = arrays_num.every((val)=>{
+            return val <1
+        })
+        document.write(everys,"<br>")
+
+
+        // by using the some 
+        let SOMES = arrays_num.some((val)=>{
+            return val == 1
+        })
+        document.write(everys,"<br>")
+
+    </script>
+</body>
+</html>

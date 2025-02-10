@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>replace</title>
+   
+
+    <!-- string replace task completed logics and wait to desigmning part -->
+
+
+    <style>
+        .container{
+            height: 100vh;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            display: flex;    
+
+        }
+        .insde{
+            height: 90%;
+            width: 90%;
+            border: 5px solid violet;
+            box-shadow: 10px 10px 20px;
+            display: inline-block;
+        }
+
+        textarea{
+            margin: 20px;
+            padding: 20px;
+            height: 500px;
+            width: 500px;
+            border-radius: 20px;
+            border: 2px solid red;
+            color: blue;
+            font-size: xx-large;
+        }
+        input{
+            margin: 20px;
+            padding: 20px;
+            height: 50px;
+            width: 200px;
+            border-radius: 20px;
+            border: 2px solid red;
+            color: blue;
+            font-size: xx-large;
+        }
+
+        .content{
+            height: 700px;
+            width: px;
+            position: absolute;
+            top: 70px;
+            left: 700px;
+        }
+
+        button{
+            background-color: green;
+            color: white;
+            border-radius: 30px;
+            height: 40px;
+            width: 100px;
+            margin-left: 50px;
+        }
+    </style>
+</head>
+<body>
+                <div class="container">
+                    <div class="insde">
+                <textarea name="" id="mess"></textarea>
+            <div class="content">
+                <label for=""><h1>Enter the replace text</h1></label>
+                <input type="text" id="reolace">
+                <label for=""><h1>enter the new txt</h1></label>
+                <input type="text" name="" id="newtext">
+            </div>
+   
+            
+    
+    <button type="button" onclick="replace_single()">replace single text</button>
+     <button type="button" onclick="replace_all()"> replace all text</button>
+    </div>
+</div>
+
+    <script>
+        
+        function replace_single(){
+            let old_txt = document.getElementById("reolace").value
+            let new_txt = document.getElementById("newtext").value
+            let messgae = document.getElementById("mess").value
+            console.log(messgae)
+            let finasl = messgae.replace(old_txt,new_txt)
+            console.log(finasl)
+            document.getElementById("mess").value = finasl
+        }
+
+        function replace_all(){
+            let old_txt = document.getElementById("reolace").value
+            let new_txt = document.getElementById("newtext").value
+            let messgae = document.getElementById("mess").value
+            console.log(messgae)
+            let finasl = messgae.replaceAll(old_txt,new_txt)
+            console.log(finasl)
+            document.getElementById("mess").value = finasl
+        }
+    </script>
+</body>
+</html>

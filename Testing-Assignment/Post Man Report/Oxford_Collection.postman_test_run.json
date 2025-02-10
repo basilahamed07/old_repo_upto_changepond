@@ -1,0 +1,462 @@
+{
+	"id": "05f72960-c974-4870-8f77-030638639968",
+	"name": "Oxford_Collection",
+	"timestamp": "2024-07-04T05:48:10.908Z",
+	"collection_id": "36734952-129fe999-59fe-49a2-ac7e-5801672a78b7",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 0,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2024-07-04T05:47:53.826Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "a5dba022-6aab-4abd-a0d3-f0f692b4be39",
+			"name": "Oxford_Home_Page",
+			"url": "https://www.ox.ac.uk/",
+			"time": 42,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				42,
+				45,
+				38,
+				38,
+				41,
+				40,
+				42,
+				38,
+				36,
+				42
+			],
+			"allTests": [
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{}
+			]
+		},
+		{
+			"id": "fab34fa1-2304-4b19-90e1-b0b7964d4ee3",
+			"name": "Oxford_admission_undergraduaction",
+			"url": "https://www.ox.ac.uk/admissions/undergraduate",
+			"time": 39,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				38,
+				41,
+				37,
+				42,
+				39,
+				40,
+				37,
+				46,
+				43,
+				39
+			],
+			"allTests": [
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{}
+			]
+		},
+		{
+			"id": "18e4c7c6-d334-4b50-9117-4a77c7285db9",
+			"name": "Oxford_Admission_graduate",
+			"url": "https://www.ox.ac.uk/admissions/graduate",
+			"time": 45,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				46,
+				37,
+				36,
+				60,
+				37,
+				38,
+				35,
+				34,
+				46,
+				45
+			],
+			"allTests": [
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{}
+			]
+		},
+		{
+			"id": "2c051eab-2c74-4d25-bd52-69185c73a178",
+			"name": "Oxford_continue_education",
+			"url": "https://www.ox.ac.uk/admissions/continuing-education",
+			"time": 38,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				35,
+				39,
+				47,
+				35,
+				42,
+				40,
+				47,
+				35,
+				34,
+				38
+			],
+			"allTests": [
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{}
+			]
+		},
+		{
+			"id": "75b6c5e5-e1f7-4f04-94fa-9e12f8494615",
+			"name": "Oxford_engage_us",
+			"url": "https://www.ox.ac.uk/research/engage-with-us",
+			"time": 45,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				35,
+				34,
+				38,
+				34,
+				44,
+				36,
+				47,
+				42,
+				46,
+				45
+			],
+			"allTests": [
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{}
+			]
+		},
+		{
+			"id": "29ef7b1d-49b7-46e4-93b5-310a61af4793",
+			"name": "Oxford_Supports",
+			"url": "https://www.ox.ac.uk/research/support-researchers",
+			"time": 36,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				38,
+				63,
+				49,
+				33,
+				34,
+				45,
+				40,
+				35,
+				49,
+				36
+			],
+			"allTests": [
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{}
+			]
+		},
+		{
+			"id": "aecf0cdf-31e2-4a2b-9671-de9165ce0bf2",
+			"name": "Oxford_reacheach",
+			"url": "https://www.ox.ac.uk/research/using-research-engage",
+			"time": 35,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				34,
+				42,
+				35,
+				47,
+				56,
+				34,
+				36,
+				34,
+				57,
+				35
+			],
+			"allTests": [
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{}
+			]
+		},
+		{
+			"id": "d0d74da6-382b-480a-ba27-59044751fb30",
+			"name": "Oxford_recognition",
+			"url": "https://www.ox.ac.uk/research/recognition",
+			"time": 37,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				37,
+				37,
+				41,
+				45,
+				37,
+				35,
+				44,
+				36,
+				39,
+				37
+			],
+			"allTests": [
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{}
+			]
+		},
+		{
+			"id": "9c93e37b-ad66-46a0-bbd3-a30cba6a2804",
+			"name": "oxford-people",
+			"url": "https://www.ox.ac.uk/about/oxford-people",
+			"time": 34,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				42,
+				36,
+				37,
+				35,
+				34,
+				34,
+				48,
+				41,
+				58,
+				34
+			],
+			"allTests": [
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{}
+			]
+		},
+		{
+			"id": "11ac6091-82b2-4fd7-8e21-fd7ba4d107de",
+			"name": "Oxford_job",
+			"url": "https://www.jobs.ox.ac.uk/",
+			"time": 351,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				819,
+				328,
+				327,
+				331,
+				333,
+				342,
+				343,
+				327,
+				328,
+				351
+			],
+			"allTests": [
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{}
+			]
+		},
+		{
+			"id": "3c34b7cf-adaf-4daf-ad2a-4650557640e6",
+			"name": "Oxford_internactional_oxford",
+			"url": "https://www.ox.ac.uk/about/international-oxford",
+			"time": 51,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				40,
+				37,
+				41,
+				35,
+				41,
+				40,
+				53,
+				37,
+				40,
+				51
+			],
+			"allTests": [
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{}
+			]
+		}
+	],
+	"count": 10,
+	"totalTime": 7874,
+	"collection": {
+		"requests": [
+			{
+				"id": "a5dba022-6aab-4abd-a0d3-f0f692b4be39",
+				"method": "GET"
+			},
+			{
+				"id": "fab34fa1-2304-4b19-90e1-b0b7964d4ee3",
+				"method": "GET"
+			},
+			{
+				"id": "18e4c7c6-d334-4b50-9117-4a77c7285db9",
+				"method": "GET"
+			},
+			{
+				"id": "2c051eab-2c74-4d25-bd52-69185c73a178",
+				"method": "GET"
+			},
+			{
+				"id": "75b6c5e5-e1f7-4f04-94fa-9e12f8494615",
+				"method": "GET"
+			},
+			{
+				"id": "29ef7b1d-49b7-46e4-93b5-310a61af4793",
+				"method": "GET"
+			},
+			{
+				"id": "aecf0cdf-31e2-4a2b-9671-de9165ce0bf2",
+				"method": "GET"
+			},
+			{
+				"id": "d0d74da6-382b-480a-ba27-59044751fb30",
+				"method": "GET"
+			},
+			{
+				"id": "9c93e37b-ad66-46a0-bbd3-a30cba6a2804",
+				"method": "GET"
+			},
+			{
+				"id": "11ac6091-82b2-4fd7-8e21-fd7ba4d107de",
+				"method": "GET"
+			},
+			{
+				"id": "3c34b7cf-adaf-4daf-ad2a-4650557640e6",
+				"method": "GET"
+			}
+		]
+	}
+}

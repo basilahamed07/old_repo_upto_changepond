@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onblue onfocus</title>
+    <script>
+        function checkdates(){
+            let valid = document.getElementById("uerid").value
+            if(valid.trim()==""){
+                // window.alert("enter the valide thing")
+                document.getElementById("insert").innerHTML="Enter the valid username"
+            }
+            else if(!valid.trim().match(["^[a-zA-Z]{3,15}$"])){
+                document.getElementById("insert").innerHTML="Enter the correct formate"
+            }
+            // else{
+            //     document.getElementById('insert').innerHTML=""
+            // }
+
+        }
+
+        function password(){
+            let valid = document.getElementById("pass").value
+            if(valid.trim()==""){
+                // window.alert("enter the valide thing")
+                document.getElementById("insert").innerHTML="enter the corret password"
+            }
+            else if(!valid.trim().match(["^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&-+=()])(?=\\S+$).{8, 20}$"])){
+                console.log("inside")
+                document.getElementById("insert").innerHTML="password not corret formate"
+            }
+            else{
+                document.getElementById('insert').innerHTML=""
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="conatiner">
+        <form>
+            <label for="">Enter the username: </label>
+            <input type="text" name="uerid" id="uerid" onblur="checkdates()">
+            <label for="">Enter the password: </label>
+            <input type="text" name="uerid" id="pass" onblur="password()">
+            <span id="insert"></span>
+
+        </form>
+    </div>
+</body>
+</html>

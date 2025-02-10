@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculator</title>
+    <style>
+        .maindiv{
+            height: 700px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .content{
+            padding: 50px;
+            height: 200px;
+            width: 400px;
+            border: 3px solid violet;
+            box-shadow: 1px 1px 30px violet;
+        }
+
+    </style>
+     
+</head>
+<body>
+    <div class="maindiv">
+        <div class="content">
+            <center>
+            <label for="number1">Enter the first number</label><br>
+            <input type="number" name="number1" id="num1"><br><br>
+            <label for="number2">Enter the second number</label><br>
+            <input type="number" name="number2" id="num2"><br><br>
+        </center>
+            <div style="display: flex; justify-content: space-between;">
+                <button type="button" onclick="addiction()">Addiction</button>
+                <button type="button" onclick="subraction()">Subtraction</button>
+                <button type="button" onclick="multiplication()">multiplication</button>
+                <button type="button" onclick="divison()">division</button>
+            </div>
+            <center>
+            <h1>result: <b id="result"></b></h1>
+        </center>
+        </div>
+    </div>
+
+    <script>
+        
+
+function addiction() {
+    let number1 = document.getElementById("num1").value;
+        let number2 = document.getElementById("num2").value;
+    document.getElementById("result").innerHTML=` ${number1 + number2}`
+}
+function subraction() {
+    let number1 = document.getElementById("num1").value;
+        let number2 = document.getElementById("num2").value;
+    document.getElementById("result").innerHTML=` ${number1 - number2}`
+}
+function multiplication() {
+    let number1 = document.getElementById("num1").value;
+        let number2 = document.getElementById("num2").value;
+    document.getElementById("result").innerHTML=` ${number1 * number2}`
+}
+function divison() {
+    let number1 = document.getElementById("num1").value;
+        let number2 = document.getElementById("num2").value;
+    document.getElementById("result").innerHTML=` ${number1 / number2}`
+}
+
+    </script>
+</body>
+</html>

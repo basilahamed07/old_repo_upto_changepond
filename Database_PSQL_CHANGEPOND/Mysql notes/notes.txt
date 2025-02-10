@@ -1,0 +1,65 @@
+
+#show databases; 
+	= this will show the exesting dbs
+	
+#create database (database_name) 
+	= it will creat the database with tje name of "database_name"
+
+#drop database (database_name)
+	= it will drop or delite the database
+	
+#system cls
+	= to clear the screen
+	
+#create table task (id int auto_increment primary key,title varchar(255) not null,start_date date,due_date date);
+) = it will creat the table colums
+
+
+# use (database) 
+	= it will select the database you willing t0 perform  
+	
+# create table checklist(id int, 
+task_id int auto_increment, 
+title varchar(255), 
+is_completed boolean not null default False, 
+primary key(id,task_id),
+foreign key(task_id) 
+references task(id) 
+on update restrict
+on delete cascade
+);  ==  it will creat the table with checklist
+
+#desc task 
+	= it will show thw structure of the table
+	
+# alter table task 
+	= it wil modify the table datas
+
+# create table subscribers(
+    -> emailvarchar(300) not null unique);
+		= creating the subscriber in it
+		
+##alter subscribers
+#alter table subscribers
+add coloum phonee_numbe int;
+	=  to adding the phonee number to it
+	
+ alter table subscribers
+    -> rename column id to s_id 
+		= to rename the coloum name to is to sid
+		
+	
+#alter table subscriber
+drop column phone;
+	= it will drop the colum of phone
+	
+	
+	
+#rename table subscriber to sub;
+	=	it wil rename the subscribers name to sub
+	
+
+#drop table sub; 
+	=	it will delite the tbale of sub
+	
+=======================================================

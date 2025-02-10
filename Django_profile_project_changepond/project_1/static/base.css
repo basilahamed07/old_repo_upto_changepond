@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Grey+Qo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Grey+Qo&family=Jersey+10&display=swap');
+*{
+ margin: 0;
+ padding: 0;
+}
+
+@font-face {
+    font-family: normals;
+    src: url("./Fonts/moderne-schwabacher.3d-schwabacher.ttf");
+}
+@font-face {
+    font-family: importent;
+    src: url("./Fonts/moderne-schwabacher.fette-schwabacher.ttf");
+}
+
+#hovers{
+    
+}
+
+body{
+    background-color: white;
+}
+
+
+.introduction{
+
+    width: 700px;
+    
+}
+
+
+/* 
+
+p{
+    color: black;
+}
+
+
+b{
+  font-family: "importent";
+  font-weight: 400;
+  font-style: normal;
+  color: gold;
+  display: inline-block;
+}
+
+h1
+{
+    font-family:"normas";
+  font-weight: 300;
+  font-style: normal;
+  color: black;
+  font-size :34px;
+}
+p{
+    color: black;
+} */
+

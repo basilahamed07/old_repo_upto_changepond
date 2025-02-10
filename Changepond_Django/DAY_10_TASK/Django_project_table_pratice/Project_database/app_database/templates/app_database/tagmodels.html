@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}Tag from{% endblock title %}
+{% block contents %}
+<form action="tagforms" method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form}}
+    <button type = "submit">Send</button>
+</form>
+{% endblock contents %}

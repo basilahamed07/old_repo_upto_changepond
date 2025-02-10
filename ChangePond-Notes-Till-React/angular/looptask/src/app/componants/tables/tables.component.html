@@ -1,0 +1,20 @@
+<table class="table table-hover" >
+   <thead>
+    <tr >
+        <th>ID</th>
+        <th>Name</th>
+        <th>Salary</th>
+        <th>Post</th>
+        <th>Address</th>
+    </tr>
+   </thead>
+  <tbody>
+    <tr *ngFor="let trash of emp">
+        <td>{{trash.id}}</td>
+        <td>{{trash.name}}</td>
+        <td>{{trash.salary}}</td>
+        <td>{{trash.post}}</td>
+        <td>{{trash.address}}</td>
+    </tr>
+  </tbody>
+</table>

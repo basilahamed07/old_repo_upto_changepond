@@ -1,0 +1,47 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+#somthing{
+        top: 0px;
+        margin: auto;
+        font-size: 30px;
+        list-style-type: none;
+        background-color: lightcoral;
+        overflow: auto;
+}
+li{
+  float: left;
+}
+
+#somthing a{
+    padding-left: 20px;
+    text-decoration: none;
+    margin:10 px;
+}
+#somthing li:hover{
+    background-color: grey;
+}
+
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    top:0px;
+    background-color: tomato;
+    width: 400px;
+}
+
+.navs a{
+    margin: center;
+    background-color: blueviolet;
+    text-decoration: none;
+    text-align: center;
+    font-size: 30px;
+    padding: 6px 5px;
+}
+
+
+

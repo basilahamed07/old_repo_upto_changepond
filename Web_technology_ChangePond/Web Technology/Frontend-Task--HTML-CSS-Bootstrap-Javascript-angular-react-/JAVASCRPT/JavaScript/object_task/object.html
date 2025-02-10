@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="display: flex; justify-content: center; align-items: center;">
+    <center>
+    <div style="display: flex; justify-content: center; align-items: center; width: 500px; height: 500px; border: 1px solid pink;" >
+        <center>
+    <button type="button" onclick="displaythis()">display</button>
+    <h1 id="result"></h1>
+        </center>
+            
+
+    </div>
+</center>
+    <script>
+        
+            function displaythis(){
+
+            let aray = [
+            {
+            id:1,
+            name:"basil ahamed",
+            salary:750000,
+            gender:"male",
+            address:"Chennai"
+            },
+            {
+                id:2,
+                name:"ahamed",
+                salary:750000,
+                gender:"male",
+                address:"Chennai"
+            },
+            {
+                id:3,
+                name:"ahamed basil",
+                salary:750000,
+                gender:"male",
+                address:"Chennai"
+            },
+            {
+                id:4,
+                name:"basil",
+                salary:750000,
+                gender:"male",
+                address:"Chennai"
+            },
+            {
+                id:5,
+                name:"basil ahamed",
+                salary:750000,
+                gender:"male",
+                address:"Chennai"
+            },
+            {
+                id:6,
+                name:"basil ahamed",
+                salary:750000,
+                gender:"male",
+                address:"Chennai"
+            }, 
+
+            ]
+
+            
+            for(trash of aray){
+                
+                document.write(`<b> <h1> ${trash.id}, ${trash.name}, ${trash.salary}, ${trash.gender}, ${trash.address} </b> </h1><br>`)
+                }
+        }
+
+
+            
+    </script>
+</body>
+</html>

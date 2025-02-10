@@ -1,0 +1,16 @@
+<div id="app">
+    <div class="controls">
+      <button *ngFor="let animation of state.animations" (click)="setView(animation)">
+        {{ animation }}
+      </button>
+    </div>
+  
+    <div class="grid-container">
+      <div class="grid">
+        <div class="gridBlock" *ngFor="let block of [1, 2, 3, 4]">
+          <!-- Grid content -->
+        </div>
+      </div>
+    </div>
+  </div>
+  

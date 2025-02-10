@@ -1,0 +1,12 @@
+Step1 => 
+
+        => pip install pip install virtualenvwrapper-win
+
+Step2 =>
+
+        -> mkvirtualenv (Name of the env)
+
+To check the what the packages are install in pip
+        
+        => pip freeze
+

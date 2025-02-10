@@ -1,0 +1,113 @@
+
+<!-- for looping the card by giving the card data and this html was using include method -->
+<style>
+  /* Container for the thank you message */
+.thankyou-containerrr {
+    position: relative; 
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    overflow: hidden;
+}
+
+/* Hidden message styling */
+
+
+.thankyou-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #28a745;
+    color: #ffffff;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 1;
+    white-space: nowrap;
+}
+
+/* Reveal message on hover */
+.thankyou-containerrr:hover .thankyou-message {
+    opacity: 1;
+    transform: translate(-50%, -60%);
+}
+
+/* Main heading */
+.thankyou-containerrr h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+/* Subheading */
+.thankyou-containerrr h2 {
+    font-size: 1.25rem;
+    color: #555;
+    margin-bottom: 1.5rem;
+}
+
+/* Main message */
+.thankyou-containerrr p {
+    font-size: 1rem;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+/* Button for navigating back or taking action */
+.thankyou-containerrrrr a {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #007bff;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.thankyou-message a:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.thankyou-containerrr a:active {
+    background-color: #003d7a;
+    transform: translateY(0);
+}
+</style>
+
+
+
+
+
+
+
+<div class="container" id="custom-cards">
+
+     <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-3 py-3">
+      {% for trash in data %}
+      <div class="thankyou-containerrr">
+        <div class="col">
+          <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url({{trash.image.url}}); background-size: cover; filter: blur(0px);">
+            <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+              <div class="pt-5 mt-5 mb-4 pb-4 display-6 lh-1 fw-bold text-success" ></h1></div>
+               <a href="{% url "detail" trash.slug %}"><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#{{trash.slug}}">
+      Know More
+    </button></a> 
+    <div class="thankyou-message">
+      {{trash.title}}
+  </div>
+            </div>
+          </div>
+        </div>
+        </div>
+        
+        {% endfor %}
+    
+      </div>
+      </div>

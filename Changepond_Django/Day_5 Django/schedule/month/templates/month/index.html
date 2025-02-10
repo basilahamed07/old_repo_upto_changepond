@@ -1,0 +1,14 @@
+
+{% extends "base.html" %}
+{% load static %}
+{% block page_title %}Month details{% endblock  %}
+{% block contents %}
+{% block app_css %}<link rel='stylesheet' href="{% static 'month_detaiils/style.css' %}">{% endblock app_css %}
+<h1>Month Details</h1>
+    {% for trash in month %}
+    {% comment %} <li> <a href="{% url "month/" trash %} "> <h1>{{trash}}</h1></li> {% endcomment %}
+    <ul>
+    <li> <a href="{% url "month-detail" trash %} ">{{trash}}</li>
+    </ul>
+    {% endfor %}
+{% endblock %}

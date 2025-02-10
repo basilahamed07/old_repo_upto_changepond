@@ -1,0 +1,30 @@
+/* .animated-text {
+    font-size: 150px;
+    font-weight: bold;
+    color: #333;
+    opacity: 0;
+    transform: translateY();
+  }
+
+.myText{
+    font-size: 150px;
+    font-weight: bold;
+} */
+
+
+
+.text-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+  transition: background-color 0.5s ease;
+}
+
+.animated-text {
+  font-size: 3rem;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}

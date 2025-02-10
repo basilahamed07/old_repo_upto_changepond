@@ -1,0 +1,77 @@
+____________________________________________________________SQL FULL CONCEPT __________________________________________________________________________________________________________________
+
+
+1) DML
+2) DQL
+3) DCL
+4) TCL
+5) DDL
+
+_______________________________________________________________Basic of sql___________________________________________________________________________________________________________________
+
+1) DML To manuplate the data like
+	-> alter table
+	-> alter colum
+	-> inserting the values etc
+
+2) DQL To writrive the data from init
+	-> select
+	-> where
+	-> group by
+	-> having
+	-> order by
+	-> limit
+	-> join
+
+3) DCL to control the data to save and checkpoint the data
+	->Save point
+	-> rollback
+	-> commit
+
+4) TCL to control the authandication of the data
+	-> grand (user)
+	-> revoke (user)
+
+5) DDL to create the structure of the data or table
+	-> create
+	-> alter
+	-> truncate
+	-> drop
+
+_______________________________________________________________Basic of sql___________________________________________________________________________________________________________________
+
+
+_______________________________________________________________Advance level of sql__________________________________________________________________________________________________________
+
+1) sub quary
+2) co-related sub quary
+3) inner join
+4) left outer join
+5) right outer join
+6) full outer join
+7) Self join
+
+__________________________________________________________________________________________________________________________________________________________________________________________________
+SQL FUNCTION OR SQL procideures 
+
+SYNTAX
+
+to create the procidure
+delimiter $$
+
+create procedure somting_here(in (variables datatype) inout (variable datatype) );
+begin
+
+
+	=============================================================================================================
+	=>to declare the variable (declare) keyword was used syntax = declare variable_nmae decimal(10) default null=
+	=>here we can use the condiction statement								    =	
+	=>looping like (variable_name : loop) or while (condiction ) do						    =
+	=> when and then function 										    =
+	=> etc													    =
+	=============================================================================================================
+
+end$$
+delimiter ;
+
+

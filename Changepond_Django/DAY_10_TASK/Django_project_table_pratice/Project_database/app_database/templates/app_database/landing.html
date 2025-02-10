@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'static/app.css' %}">
+{% block title %}HomePage{% endblock  %}
+{% block contents %}
+<div class="container px-4 py-5" id="custom-cards">
+  <h1 class="pb-2 border-bottom text-success">Introduction</h1>
+
+<div class="row row-cols-1 row-cols-lg-2 align-items-md-center g-4 py-5 d-flex container-fluid">
+  <div class="col ">
+  <h3><b>{{introduction_data.first_name}} {{introduction_data.last_name}}</b> is an accomplished individual whose expertise and dedication make him a standout in his field. For any professional matters or potential collaborations, <b>{{introduction_data.first_name}}</b> can be easily contacted via his email: <b>{{introduction_data.email_address}}</b>. His email is the gateway for networking and exploring new opportunities with him.</h3>
+  </div>
+
+  
+  <div class="col rounded-4 shadow-lg bg-image hover-zoom">
+    <div class="bg-image hover-zoom text-bg-dark bg-dark">
+      <img  src=" {% static "images\photo1 - Copy.jpg" %} " alt="" class="w-100">
+    </div>
+</div>
+    
+    </div>
+  </div>
+  
+</div>
+</div>
+<div class="container px-4 py-5" id="custom-cards">
+  <h2 class="pb-2 border-bottom text-success" id="post">Latest Post</h2>
+</div>
+{% include "include/post.html" %}
+<div class="d-grid gap-2 col-1 mx-auto">
+  <a href="{% url "all-post" %}"><button class="btn btn-primary" type="button">All Post</button></a>
+</div> 
+<div class="container px-4 py-5" id="custom-cards">
+  <h1 class=" border-bottom text-success" id="about">Feedback</h1>
+</div>
+
+
+{% comment %} <a href="{% url "command" %}"><button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#{{trash.slug}}">
+ Feedbackform
+</button></a> {% endcomment %}
+
+<div class="container px-4 py-5" id="custom-cards">
+  <h1 class=" border-bottom text-success" id="about">About</h1>
+</div>
+<p>Hello! My name is Basil Ahamed, and I am 22 years old. I have earned a Bachelor’s degree in Computer Science (BE) and have further distinguished myself with certifications in Certified Ethical Hacking (CEH), Python, and Cybersecurity. These credentials highlight not only my technical expertise but also my commitment to maintaining a high standard of professional excellence. My skills and accomplishments have been acknowledged through a notable rating, which reflects my dedication and proficiency in the field. I am enthusiastic about utilizing my background and qualifications to make a meaningful contribution and to continue advancing in my career.</p>
+
+
+{% endblock  %}

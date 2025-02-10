@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+
+
+
+    <script>
+        let coueses = ["python","java","sql"]
+        for(let num = 0; num < coueses.length; num++){
+            document.write(` ${num+1} ${coueses[num]},<br>`)
+        }
+        document.write("<hr> <hr> <hr> <hr>")
+
+        for(let container of coueses){
+            document.write(container,"<br>")
+        }
+        document.write("<hr> <hr> <hr> <hr>")
+
+        for(let trash in coueses){
+            document.write(trash,"<br>")
+        }
+        document.write("<hr> <hr> <hr> <hr>")
+        document.write("push","<br>")
+        console.log(coueses.pop())
+        document.write("<hr> <hr> <hr> <hr>")
+        document.write("pop")
+        document.write(coueses.pop())
+        document.write("<hr> <hr> <hr> <hr>")
+        document.write("onshift")
+        document.write(coueses.unshift(),"<br>")
+        document.write("<hr> <hr> <hr> <hr>")
+        document.write("push")
+        document.write(coueses.shift(),"<br>")
+        document.write("<hr> <hr> <hr> <hr>")
+        document.write("push")
+        document.write(coueses.push("react"),"<br>")
+        
+    </script>
+</body>
+</html>

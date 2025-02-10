@@ -1,0 +1,41 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+header{
+    position: fixed;
+    background-color: blueviolet;
+    color: green;
+    padding: 20px;
+    border: 10px solid green;
+    border-width: 10px 0px 10px 0px;
+    text-shadow: 12px 1px 30px green;
+    width: 100%;
+}
+
+img{
+    border-radius: 50%;
+    border: 10px solid green;
+}
+span{
+    vertical-align: top;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 100px;
+    font-weight: 900;
+    position: relative;
+    left: 70px;
+    top: 40px;
+}
+
+nav{
+    /* position: -webkit-sticky; */
+    position: fixed;
+    top: 0;
+    justify-content: space-between;
+    background-color: gray;
+    height: 50px;
+}
+
+a{
+    padding-left: 120px;
+}

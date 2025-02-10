@@ -1,0 +1,37 @@
+{%extends "base.html"%}
+{%block page_title%}author details {%endblock%}
+{%block content%}
+<h1>Author details</h1>
+<hr>
+<ul>
+<h1>By Using the Id</h1>
+{%for trash in author%}
+
+<li><a href="{%url 'author_name' trash.id%}"><h1>{{trash}}</h1></a></li>
+
+{%endfor%}
+</ul>
+<hr>
+<hr>
+<ul>
+<h1>By Using the Name</h1>
+{%for trash in author%}
+
+<li><a href="{%url 'author_name' trash%}"><h1>{{trash}}</h1></a></li>
+
+{%endfor%}
+</ul>
+<hr>
+</ul>
+<hr>
+<hr>
+<ul>
+<h1>By Using the slug method</h1>
+{%for trash in author%}
+
+<li><a href="{%url 'author_name' trash.slug%}"><h1>{{trash}}</h1></a></li>
+
+{%endfor%}
+</ul>
+<hr>
+{%endblock%}

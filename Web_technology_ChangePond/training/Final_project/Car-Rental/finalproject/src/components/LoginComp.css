@@ -1,0 +1,12 @@
+body{
+    background: url("https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/46f37945885079.584030cfd603d.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#inputform{
+    padding: 70px;
+    border-radius: 30px;
+    backdrop-filter: blur(20px);
+    box-shadow: 1px 1px 10px gold;
+}

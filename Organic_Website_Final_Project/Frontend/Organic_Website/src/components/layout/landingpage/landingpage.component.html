@@ -1,0 +1,66 @@
+<div class="container">
+	<div class="carousel">
+		<input type="radio" id="carousel-1" name="carousel[]" checked>
+		<input type="radio" id="carousel-2" name="carousel[]">
+     <input type="radio" id="carousel-3" name="carousel[]">
+		<input type="radio" id="carousel-4" name="carousel[]">
+		<input type="radio" id="carousel-5" name="carousel[]">
+		<ul class="carousel__items">
+			<li class="carousel__item"><img src="//lh5.googleusercontent.com/-cTEgPOnd3l8/U8-EmaZ4KNI/AAAAAAAABc8/6eacbALkQ6A/w1358-h905-no/carousel-1.JPG" alt=""></li>
+			<li class="carousel__item"><img src="//lh4.googleusercontent.com/-ntVHbbWX5eo/U8-EmV8P4cI/AAAAAAAABc4/ICYBGkcztTc/w1358-h905-no/carousel-2.jpg" alt=""></li>
+			<li class="carousel__item"><img src="//lh5.googleusercontent.com/-batEXUZE_e4/U8-EmLF9-hI/AAAAAAAABc0/J3tJVUa6Buk/w1358-h905-no/carousel-3.jpg" alt=""></li>
+			<li class="carousel__item"><img src="//lh5.googleusercontent.com/-gywqIeMvel0/U8-EolKdtkI/AAAAAAAABdM/G0-NHuvvJUU/w1358-h905-no/carousel-4.jpg" alt=""></li>
+			<li class="carousel__item"><img src="//lh5.googleusercontent.com/--2iANjL3ikc/U8-EoGJ18mI/AAAAAAAABdI/fBe-q3Gos6Y/w1358-h905-no/carousel-5.jpg" alt=""></li>
+		</ul>
+     <div class="carousel__prev">
+     	<label for="carousel-1"></label>
+     	<label for="carousel-2"></label>
+     	<label for="carousel-3"></label>
+     	<label for="carousel-4"></label>
+     	<label for="carousel-5"></label>
+     </div>
+     <div class="carousel__next">
+       <label for="carousel-1"></label>
+       <label for="carousel-2"></label>
+       <label for="carousel-3"></label>
+       <label for="carousel-4"></label>
+       <label for="carousel-5"></label>
+     </div>
+     <div class="carousel__nav">
+       <label for="carousel-1"></label>
+       <label for="carousel-2"></label>
+       <label for="carousel-3"></label>
+       <label for="carousel-4"></label>
+       <label for="carousel-5"></label>
+     </div>
+   </div>
+ </div>
+
+
+
+
+<h1>{{data[0].P_Name}}</h1>
+
+ <div *ngIf="data[0].length > 0">
+    <h2>Data from API:</h2>
+    <ul>
+      <!-- Assuming data is an array of objects -->
+      <li *ngFor="let item of data">
+        <!-- Adjust based on the structure of your data -->
+        <p><strong>ID:</strong> {{ item[0].id }}</p>
+        <p><strong>Name:</strong> {{ item.P_Name }}</p>
+        <p><strong>Description:</strong> {{ item.P_description }}</p>
+        <p><strong>Price:</strong> {{ item.P_Price }}</p>
+        <p><strong>Stock:</strong> {{ item.P_Stock }}</p>
+        <p><strong>Category ID:</strong> {{ item.P_Category_id }}</p>
+        <p><strong>Brand:</strong> {{ item.P_Brand }}</p>
+        <p><strong>Image URL:</strong> <a [href]="item.P_image" target="_blank">View Image</a></p>
+        <hr>
+      </li>
+    </ul>
+  </div>
+  
+  <div *ngIf="data.length === 0">
+    <p>No data available.</p>
+  </div>
+  

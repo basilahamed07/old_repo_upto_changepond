@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt</title>
+    <style>
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            width: 100vw;   
+            color: white;
+          
+        }
+        .inside{
+            width: 350px;
+            height: 130px;
+            border: 5px solid red;
+            color: green;
+            border-radius: 30px;
+            font-size: xx-large;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="inside">
+            <h1 id="final"></h1>
+        </div>
+    </div>
+
+   
+    <script>
+        let data = prompt("Enter the name here: ")
+        let array = ["a","e","i",'o','u',"A","E",'I',"O","U"]
+        let flage = false
+        for(let ints = 0; ints <= array.length; ints++){
+            if (data == array[ints]){
+                flage = true
+                break
+            }
+        }
+        if(flage==true){
+            document.getElementById("final").innerHTML = "vovels"
+        }
+        else{
+            document.getElementById("final").innerHTML = "not vovels"
+        }
+
+        
+    </script>
+
+</body>
+</html>

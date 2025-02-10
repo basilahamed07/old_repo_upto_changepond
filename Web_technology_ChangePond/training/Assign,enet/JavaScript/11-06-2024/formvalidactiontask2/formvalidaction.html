@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./function.js"></script>
+    <style>
+        body{
+            background-color: black;
+            /* background: url("https://steamuserimages-a.akamaihd.net/ugc/2045241066498120300/ED2F08358CBBA2C5A1867BF08B1A0B035985EFEF/?imw=637&imh=358&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=true"); */
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .container{
+            display: flex;
+            height: 100vh;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+        .login-box{
+            padding: 40px;
+            width: 80%;
+            border: 3px solid yellow;
+            border: 20px;
+            box-shadow: 10px 10px 20px;                     
+            background: transparent;
+            backdrop-filter: blur(10px);
+        }
+        .inputs{
+            width: 300px;
+            height: 30px;
+            border: 2px solid black;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            outline: none;
+        }
+        label{
+            font-size: 20px;
+            font-weight: bold;
+            margin: 10px;
+            color: white;
+        }
+        span{
+            font-size: 20px;
+            font-weight: bold;
+            margin: 10px;
+            color: red;
+        }
+        /* }
+        button{
+            width: 100px;
+            height: 50px;
+            border: none;
+            border-radius: 30px;
+        } */
+        input{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    
+<div class="container">
+    <div class="login-box">
+    <form class="box" name="myform" onsubmit="return checkvalid()">
+        <center>
+            <label for="firstname">Enter Your First Name</label>
+            <input type="text" name="firstname" id="firstname" class="inputs"> <br>
+
+
+            <label for="secondname">Enter Your second Name</label>
+            <input type="text" name="secondname" id="secondname" class="inputs"> <br>
+
+
+            <label for="password">Enter the password</label>
+            <input type="text" name="password" id="password" class="inputs"> <br>
+
+
+            <label for="email">Enter the email</label>
+            <input type="email" name="email" id="email" class="inputs"> <br>
+
+            <div style="color: white;">
+            <label for="gender">Enter your gender</label>
+           
+            <input type="radio" name="gender" value="male">Male
+            <input type="radio" name="gender" value="female">Female <br>
+        </div>
+<br>           <div style="color: white;">
+            <label>Select Qualification:</label> <br><br>
+            <input type="checkbox" name="subject" value="ssc">Python
+            <input type="checkbox" name="subject" value="hsc">Java
+            <input type="checkbox" name="subject" value="ug">.NET
+            <input type="checkbox" name="subject" value="pg">meachine learning
+            <input type="checkbox" name="subject" value="master">Datasciences <br><br><br>
+
+            <button type="submit">Submit</button>
+        </div>
+    </div>
+    </div>
+        
+    </form>
+</center>
+
+</body>
+</html>

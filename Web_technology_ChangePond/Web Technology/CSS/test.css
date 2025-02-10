@@ -1,0 +1,17 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-image: url(../Assact/images/159Z_2107.w026.n002.628B.p1.628.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#final {
+    color: yellow;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 40px;
+    font-weight: 900;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt</title>
+</head>
+<body>
+    <script>
+        let data = prompt("Enter the name here: ", "basil ahamed here")
+        let array = ["a","e","i",'o','u',"A","E",'I',"O","U"]
+        let flage = false
+        for(let ints = 0; ints <= array.length; ints++){
+            if (data == array[ints]){
+                flage = true
+                break
+            }
+        }
+        if(flage==true){
+            document.write("vovels")
+        }
+        else{
+            document.write("not vovels")
+        }
+
+        
+    </script>
+</body>
+</html>

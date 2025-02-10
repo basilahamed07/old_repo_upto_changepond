@@ -1,0 +1,339 @@
+1. Get department,total salary with respect to a department from employee table.
+
+sql> select department_id, sum(salary) as total_salary
+    -> from employee
+    -> group by department_id;
++---------------+--------------+
+| department_id | total_salary |
++---------------+--------------+
+|            20 |        41000 |
+|            30 |        30800 |
+|            40 |        16900 |
+|            50 |        34100 |
+|            60 |        22400 |
+|            70 |         2900 |
+|            80 |         8900 |
+|            90 |         2400 |
+|           100 |        12000 |
+|           110 |         2800 |
+|           130 |         2500 |
+|           140 |         6900 |
+|           150 |         7800 |
+|           160 |         7700 |
+|           170 |        17200 |
++---------------+--------------+
+15 rows in set (0.00 sec)
+
+2. Get department,total salary with respect to a department from employee table order by total salary descending
+
+mysql> select department_id, sum(salary) as total_salary
+    -> from employee
+    -> group by department_id
+    -> order by sum(salary) desc;
++---------------+--------------+
+| department_id | total_salary |
++---------------+--------------+
+|            20 |        41000 |
+|            50 |        34100 |
+|            30 |        30800 |
+|            60 |        22400 |
+|           170 |        17200 |
+|            40 |        16900 |
+|           100 |        12000 |
+|            80 |         8900 |
+|           150 |         7800 |
+|           160 |         7700 |
+|           140 |         6900 |
+|            70 |         2900 |
+|           110 |         2800 |
+|           130 |         2500 |
+|            90 |         2400 |
++---------------+--------------+
+15 rows in set (0.00 sec)
+
+3. Get department wise maximum salary from employee table order by salary ascending
+
+mysql> select department_id, max(salary) as maximum_salary
+    -> from employee
+    -> group by department_id
+    -> order by max(salary) ASC;
++---------------+----------------+
+| department_id | maximum_salary |
++---------------+----------------+
+|            90 |           2400 |
+|           130 |           2500 |
+|           110 |           2800 |
+|            70 |           2900 |
+|            80 |           5800 |
+|           140 |           6900 |
+|           160 |           7700 |
+|           150 |           7800 |
+|            40 |           7900 |
+|            50 |           8200 |
+|            60 |           9000 |
+|           170 |           9000 |
+|           100 |          12000 |
+|            30 |          17000 |
+|            20 |          24000 |
++---------------+----------------+
+15 rows in set (0.07 sec)
+
+4. Get department wise minimum salary from employee table order by salary ascending
+
+
+mysql> select department_id, min(salary) as minimum_salary
+    -> from employee
+    -> group by department_id
+    -> order by min(salary) ASC;
++---------------+----------------+
+| department_id | minimum_salary |
++---------------+----------------+
+|            50 |           2200 |
+|            90 |           2400 |
+|           130 |           2500 |
+|            60 |           2600 |
+|            30 |           2800 |
+|           110 |           2800 |
+|            70 |           2900 |
+|            80 |           3100 |
+|            40 |           4200 |
+|           140 |           6900 |
+|           160 |           7700 |
+|           150 |           7800 |
+|           170 |           8200 |
+|           100 |          12000 |
+|            20 |          17000 |
++---------------+----------------+
+15 rows in set (0.00 sec)
+
+
+
+
+
+5. Select department,total salary with respect to a department from employee table where total salary greater
+-- than 800000 order by Total_Salary descending
+
+
+mysql> select department_id, sum(salary)
+    -> from employee
+    -> group by department_id
+    -> having sum(salary) > 800000
+    -> order by sum(salary) desc;
+Empty set (0.00 sec)
+
+
+
+
+6. Select employees first name, last name, job_id and salary whose first name starts with alphabet S
+
+
+mysql> select first_name, last_name, job_id , salary
+    -> from employee
+    -> where first_name like "s%";
++------------+-----------+----------+--------+
+| first_name | last_name | job_id   | salary |
++------------+-----------+----------+--------+
+| Steven     | King      | AD_PRES  |  24000 |
+| Shelli     | Baida     | PU_CLERK |   2900 |
+| Sigal      | Tobias    | PU_CLERK |   2800 |
+| Shanta     | Vollman   | ST_MAN   |   6500 |
+| Steven     | Markle    | ST_CLERK |   2200 |
++------------+-----------+----------+--------+
+5 rows in set (0.00 sec)
+
+
+
+7. Write a query to select employee with the highest salary
+
+mysql> select *
+    -> from employee
+    -> order by salary desc
+    -> limit 0,1;
++-------------+------------+-----------+-------+--------------+------------+---------+--------+----------------+------------+---------------+
+| employee_id | first_name | last_name | email | phone_number | hire_date  | job_id  | salary | commission_pct | manager_id | department_id |
++-------------+------------+-----------+-------+--------------+------------+---------+--------+----------------+------------+---------------+
+|         100 | Steven     | King      | SKING | 515.123.4567 | 1987-06-17 | AD_PRES |  24000 |           NULL |       NULL |            20 |
++-------------+------------+-----------+-------+--------------+------------+---------+--------+----------------+------------+---------------+
+1 row in set (0.02 sec)
+
+
+8. Select employee with the second highest salary
+
+mysql> select *
+    -> from employee
+    -> order by salary desc
+    -> limit 1,1;
++-------------+------------+-----------+----------+--------------+------------+--------+--------+----------------+------------+---------------+
+| employee_id | first_name | last_name | email    | phone_number | hire_date  | job_id | salary | commission_pct | manager_id | department_id |
++-------------+------------+-----------+----------+--------------+------------+--------+--------+----------------+------------+---------------+
+|         101 | Neena      | Kochhar   | NKOCHHAR | 515.123.4568 | 1989-11-21 | AD_VP  |  17000 |           NULL |        100 |            20 |
++-------------+------------+-----------+----------+--------------+------------+--------+--------+----------------+------------+---------------+
+1 row in set (0.00 sec)
+
+
+9. Get the count of employees hired year wise
+
+mysql>  select year(hire_date) , count(*)
+    ->     from employee
+    ->     group by year(hire_date)
+    ->     order by year(hire_date)
+    -> ;
++-----------------+----------+
+| year(hire_date) | count(*) |
++-----------------+----------+
+|            1987 |        1 |
+|            1989 |        1 |
+|            1990 |        1 |
+|            1991 |        1 |
+|            1993 |        1 |
+|            1994 |        3 |
+|            1995 |        2 |
+|            1996 |        1 |
+|            1997 |       10 |
+|            1998 |        4 |
+|            1999 |        5 |
+|            2000 |        1 |
++-----------------+----------+
+12 rows in set (0.00 sec)
+
+
+10. Select the employees whose first_name contains “an”
+
+ysql> select first_name
+    -> from employee
+    -> where first_name like "%an%";
++-------------+
+| first_name  |
++-------------+
+| Alexander   |
+| Diana       |
+| Nancy       |
+| Daniel      |
+| Jose Manuel |
+| Alexander   |
+| Shanta      |
++-------------+
+7 rows in set (0.00 sec)
+
+
+11. Find the employees who joined in August, 1994.
+
+mysql> select *
+    -> from employee
+    -> where month(hire_date) = 8;;
++-------------+------------+-----------+----------+--------------+------------+------------+--------+----------------+------------+---------------+
+| employee_id | first_name | last_name | email    | phone_number | hire_date  | job_id     | salary | commission_pct | manager_id | department_id |
++-------------+------------+-----------+----------+--------------+------------+------------+--------+----------------+------------+---------------+
+|         108 | Nancy      | Greenberg | NGREENBE | 515.124.4569 | 1994-08-17 | FI_MGR     |  12000 |           NULL |        101 |           100 |
+|         109 | Daniel     | Faviet    | DFAVIET  | 515.124.4169 | 1994-08-12 | FI_ACCOUNT |   9000 |           NULL |        108 |           170 |
+|         121 | Adam       | Fripp     | AFRIPP   | 650.123.2234 | 1997-08-09 | ST_MAN     |   8200 |           NULL |        100 |            50 |
++-------------+------------+-----------+----------+--------------+------------+------------+--------+----------------+------------+---------------+
+3 rows in set (0.00 sec)
+
+12. Write a SQL query to display the 5 least earning employees
+
+mysql> select *
+    -> from employee
+    -> order by salary asc
+    -> limit 0,5;
++-------------+------------+-------------+----------+--------------+------------+----------+--------+----------------+------------+---------------+
+| employee_id | first_name | last_name   | email    | phone_number | hire_date  | job_id   | salary | commission_pct | manager_id | department_id |
++-------------+------------+-------------+----------+--------------+------------+----------+--------+----------------+------------+---------------+
+|         128 | Steven     | Markle      | SMARKLE  | 650.124.1434 | 2000-03-04 | ST_CLERK |   2200 |           NULL |        120 |            50 |
+|         127 | James      | Landry      | JLANDRY  | 650.124.1334 | 1999-01-02 | ST_CLERK |   2400 |           NULL |        120 |            90 |
+|         119 | Karen      | Colmenares  | KCOLMENA | 515.127.4566 | 1999-04-08 | PU_CLERK |   2500 |           NULL |        114 |           130 |
+|         118 | Guy        | Himuro      | GHIMURO  | 515.127.4565 | 1998-01-02 | PU_CLERK |   2600 |           NULL |        114 |            60 |
+|         126 | Irene      | Mikkilineni | IMIKKILI | 650.124.1224 | 1998-11-12 | ST_CLERK |   2700 |           NULL |        120 |            50 |
++-------------+------------+-------------+----------+--------------+------------+----------+--------+----------------+------------+---------------+
+5 rows in set (0.00 sec)
+
+13. Find the employees hired in the 80s
+
+mysql> select *
+    -> from employee
+    -> where year(hire_date) between 1980 and 1989;
++-------------+------------+-----------+----------+--------------+------------+---------+--------+----------------+------------+---------------+
+| employee_id | first_name | last_name | email    | phone_number | hire_date  | job_id  | salary | commission_pct | manager_id | department_id |
++-------------+------------+-----------+----------+--------------+------------+---------+--------+----------------+------------+---------------+
+|         100 | Steven     | King      | SKING    | 515.123.4567 | 1987-06-17 | AD_PRES |  24000 |           NULL |       NULL |            20 |
+|         101 | Neena      | Kochhar   | NKOCHHAR | 515.123.4568 | 1989-11-21 | AD_VP   |  17000 |           NULL |        100 |            20 |
++-------------+------------+-----------+----------+--------------+------------+---------+--------+----------------+------------+---------------+
+2 rows in set (0.00 sec)
+
+
+
+14. Find the employees who joined the company after 15th of the month
+
+
+mysql> select *
+    -> from employee
+    -> where day(hire_date) > 15;
++-------------+------------+-----------+----------+--------------+------------+---------+--------+----------------+------------+---------------+
+| employee_id | first_name | last_name | email    | phone_number | hire_date  | job_id  | salary | | manager_id | department_id |
++-------------+------------+-----------+----------+--------------+------------+---------+--------+----------------+------------+---------------+
+|         100 | Steven     | King      | SKING    | 515.123.4567 | 1987-06-17 | AD_PRES |  24000 |           NULL |       NULL |            20 |
+|         101 | Neena      | Kochhar   | NKOCHHAR | 515.123.4568 | 1989-11-21 | AD_VP   |  17000 |           NULL |        100 |            20 |
+|         103 | Alexander  | Hunold    | AHUNOLD  | 590.423.4567 | 1990-09-30 | IT_PROG |   9000 |           NULL |        102 |            60 |
+|         104 | Bruce      | Ernst     | BERNST   | 590.423.4568 | 1991-05-21 | IT_PROG |   6000 |           NULL |        103 |            60 |
+|         105 | David      | Austin    | DAUSTIN  | 590.423.4569 | 1997-06-25 | IT_PROG |   4800 |           NULL |        103 |            60 |
+|         108 | Nancy      | Greenberg | NGREENBE | 515.124.4569 | 1994-08-17 | FI_MGR  |  12000 |           NULL |        101 |           100 |
+|         120 | Matthew    | Weiss     | MWEISS   | 650.123.1234 | 1996-07-18 | ST_MAN  |   8000 |           NULL |        100 |            50 |
++-------------+------------+-----------+----------+--------------+------------+---------+--------+----------------+------------+---------------+
+7 rows in set (0.02 sec)
+
+
+15. find the count of employees who not received the commission
+
+mysql> select commission_pct
+    -> from employee
+    -> where commission_pct is null;
++----------+
+| count(*) |
++----------+
+|       31 |
++----------+
+1 row in set (0.00 sec)
+
+
+
+16. Calculate the total salary inclusive of commission for all the employees
+
+mysql> select salary + commission_pct as total_salary
+    -> from employee
+    -> where commission_pct is null;
++--------------+
+| total_salary |
++--------------+
+|         NULL |
+|         NULL |
+|         NULL |
+|         NULL |
+|         NULL |
+|         NULL |
+|         NULL |
+|         NULL |
+|         NULL |
+|         NULL |
+|         NULL |
+|         NULL |
+|         NULL |
+|         NULL |
+|         NULL |
+|         NULL |
+|         NULL |
+|         NULL |
+|         NULL |
+|         NULL |
+|         NULL |
+|         NULL |
+|         NULL |
+|         NULL |
+|         NULL |
+|         NULL |
+|         NULL |
+|         NULL |
+|         NULL |
+|         NULL |
+|         NULL |
++--------------+
+31 rows in set (0.00 sec)

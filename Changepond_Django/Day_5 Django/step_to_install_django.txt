@@ -1,0 +1,82 @@
+Step1 => 
+
+        => pip install pip install virtualenvwrapper-win
+
+Step2 =>
+
+        -> mkvirtualenv (Name of the env)
+
+To check the what the packages are install in pip
+        
+        => pip freeze
+
+to install the django:
+
+        => pip install django
+
+to create the project in django:
+
+        => django-admin startproject (Project_name)
+
+to create the app in django
+
+        => cd (Project_name)
+        => django-admin stratapp (app_name)
+
+to run the server:
+        => python manage.py runserver
+
+
+
+
++++++++++++++++++++++++++++_______________________+++++++++++++++++++++++____________________+++++++++++++++++++________________________
+Structure Defenaction:
+
+(Project_name) django_pratice_1
+                        => __init__.py 
+                        => asgi.py
+                        => settings.py
+                        => urls.py
+                        => wsgi.py
+                    => manage.py
+
+=> manage.py File:
+    => command line utility for our project
+    => the file contains the code for running the server
+    => it lets you to interact with your project
+        => example code:
+            => python manage.py runserver
+            => python manage.py makemigraction
+                etc
+=> setting.py:
+    => Typically used to store the configuraction informcation in django
+    => default database was set in it
+    => when ever we create the app in django we want to add the app name in setting/.py file 
+    => inside the instal_app[(app_name)]
+=> __init__.py:
+    => empty file , function of this file tells
+python interpreter that is directory has package.
+
+=> urls.py:
+    => used to provide you the address of the particular page
+
+=> wsgi.py:
+    => it is the way how server interact with the application
+    also asgi.py (work similar like wsgi)
+
+
+=> to create the app i project
+
+        =>  
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+urls
+
+-> create the urls.py file inside the app 
+
+urls.py:
+        we can poass the variiable via url by using thee (<>)
+        exmaple = 
+                path("<variable>",function)

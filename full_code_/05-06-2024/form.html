@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regsiter form</title>
+</head>
+
+<body>
+    <section
+        style="margin: auto; width: 450px; padding-bottom: 30px; background-color: rgba(255, 255, 355, 0.5); border: 1px solid black; box-shadow: 1px 1px 10px; border-radius: 30px;">
+        <form action="POST" style="margin: 50px; padding-top: 10px;">
+            <label for="fname">Enter the First name :</label>
+            <input type="text" placeholder="Firest name" name="name" id="name" required><br><br><br>
+
+            <label for="lname">Enter the Sec name :</label>
+            <input type="text" placeholder="second name" name="lname" id="lname" required><br><br><br>
+
+            <label for="phone">Enter the Phone :</label>
+            <input type="tel" placeholder="Phone number" name="phone" id="email" required><br><br><br>
+
+            <label for="email">Enter the email :</label>
+            <input type="email" placeholder="email id" name="email" id="email" required><br><br><br>
+
+            <label for="pass">enter the password :</label>
+            <input type="password" placeholder="password" name="pass" id="name" required><br><br><br>
+
+            <label for="DOB">enter the date of birth:</label>
+            <input type="date" placeholder="date of birth name="DOB" id="name" required><br><br><br>
+
+            <label for="age">enter the age:</label>
+            <input type="number" placeholder="age" name="DOB" id="name" min="18" max="99" required><br><br><br>
+
+            <label for="gender">enter the gender:</label>
+            <input type="radio" name="gender" value="Male">MALE
+            <input type="radio" name="gender" value="Female">FEMALE<br><br><br>
+
+            <label for="HOME">enter the gender:</label>
+            <input type="checkbox" name="HOME" value="HOME_PG">pg
+            <input type="checkbox" name="HOME" value="home_homE">home   <br><br><br>
+
+            <label for="selectcource">Select the cources</label>
+            <select required name="selectcource">
+                <option value="python">Python</option>
+                <option value="java">java</option>
+                <option value="sql">SQL</option>
+                <option value="indez">INDEX</option> 
+            </select><br><br><br>
+            
+            <label for="colour">Enter the colour</label>
+            <input type="color" name="color" id="">
+            <center><button type="submit">Submit Form</button></center>
+        </form>
+    </section>
+</body>
+
+</html>

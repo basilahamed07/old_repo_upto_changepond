@@ -1,0 +1,195 @@
+assignment.sql
+
+
+Joins:
+Use Employee and Departments
+1. Write a query to select employees and their corresponding managers and their salaries
+
+
+select concat(m.first_name," ",m.last_name) as mamager,
+m.salary as manager_salary,
+concat(e.first_name," ",e.last_name) as employees,
+e.salary as employees_salary
+from employee e
+inner join employee m on e.manager_id = m.employee_id;
+
+mysql> select concat(m.first_name," ",m.last_name) as mamager,
+    -> m.salary as manager_salary,
+    -> concat(e.first_name," ",e.last_name) as employees,
+    -> e.salary as employees_salary
+    -> from employee e
+    -> inner join employee m on e.manager_id = m.employee_id;
++------------------+----------------+-------------------+------------------+
+| mamager          | manager_salary | employees         | employees_salary |
++------------------+----------------+-------------------+------------------+
+| Steven King      |          24000 | Neena Kochhar     |            17000 |
+| Steven King      |          24000 | Lex De Haan       |            17000 |
+| Lex De Haan      |          17000 | Alexander Hunold  |             9000 |
+| Alexander Hunold |           9000 | Bruce Ernst       |             6000 |
+| Alexander Hunold |           9000 | David Austin      |             4800 |
+| Alexander Hunold |           9000 | Valli Pataballa   |             4800 |
+| Alexander Hunold |           9000 | Diana Lorentz     |             4200 |
+| Neena Kochhar    |          17000 | Nancy Greenberg   |            12000 |
+| Nancy Greenberg  |          12000 | Daniel Faviet     |             9000 |
+| Nancy Greenberg  |          12000 | John Chen         |             8200 |
+| Nancy Greenberg  |          12000 | Ismael Sciarra    |             7700 |
+| Nancy Greenberg  |          12000 | Jose Manuel Urman |             7800 |
+| Nancy Greenberg  |          12000 | Luis Popp         |             6900 |
+| Steven King      |          24000 | Den Raphaely      |            11000 |
+| Den Raphaely     |          11000 | Alexander Khoo    |             3100 |
+| Den Raphaely     |          11000 | Shelli Baida      |             2900 |
+| Den Raphaely     |          11000 | Sigal Tobias      |             2800 |
+| Den Raphaely     |          11000 | Guy Himuro        |             2600 |
+| Den Raphaely     |          11000 | Karen Colmenares  |             2500 |
+| Steven King      |          24000 | Matthew Weiss     |             8000 |
+| Steven King      |          24000 | Adam Fripp        |             8200 |
+| Steven King      |          24000 | Payam Kaufling    |             7900 |
+| Steven King      |          24000 | Shanta Vollman    |             6500 |
+| Steven King      |          24000 | Kevin Mourgos     |             5800 |
+| Matthew Weiss    |           8000 | Julia Nayer       |             3200 |
+| Matthew Weiss    |           8000 | Irene Mikkilineni |             2700 |
+| Matthew Weiss    |           8000 | James Landry      |             2400 |
+| Matthew Weiss    |           8000 | Steven Markle     |             2200 |
+| Adam Fripp       |           8200 | Laura Bissot      |             3300 |
+| Adam Fripp       |           8200 | Mozhe Atkinson    |             2800 |
++------------------+----------------+-------------------+------------------+
+30 rows in set (0.00 sec)
+
+
+
+2. Write a query to show count of employees under each manager in descending order
+
+
+(not sure)
+select m.first_name as mamager,
+count(e.first_name)
+from employee e
+inner join employee m on e.manager_id = m.employee_id
+group by m.first_name;
+
+
+mysql> select m.first_name as mamager,
+    -> count(e.first_name)
+    -> from employee e
+    -> inner join employee m on e.manager_id = m.employee_id
+    -> group by m.first_name;
++-----------+---------------------+
+| mamager   | count(e.first_name) |
++-----------+---------------------+
+| Steven    |                   8 |
+| Lex       |                   1 |
+| Alexander |                   4 |
+| Neena     |                   1 |
+| Nancy     |                   5 |
+| Den       |                   5 |
+| Matthew   |                   4 |
+| Adam      |                   2 |
++-----------+---------------------+
+8 rows in set (0.00 sec)
+
+
+3. Find the count of employees in each department
+
+
+mysql> select d.*, count(first_name) AS Employees_Count
+    -> from employee
+    -> left join departmentS d using (department_id)
+    -> group by department_id
+    -> ORDER BY DEPARTMENT_ID;
+
+
+
+
+    select d.*, count(first_name) AS Employees_Count
+    -> from employee
+    -> left join departmentS d using (department_id)
+    -> group by department_id
+    -> ORDER BY DEPARTMENT_ID;
++---------------+----------------------+-------------+-----------------+
+| department_id | department_name      | location_id | Employees_Count |
++---------------+----------------------+-------------+-----------------+
+|            20 | Marketing            |         180 |               2 |
+|            30 | Purchasing           |        1700 |               3 |
+|            40 | Human Resources      |        2400 |               3 |
+|            50 | Shipping             |        1500 |               7 |
+|            60 | IT                   |        1400 |               4 |
+|            70 | Public Relations     |        2700 |               1 |
+|            80 | Sales                |        2500 |               2 |
+|            90 | Executive            |        1700 |               1 |
+|           100 | Finance              |        1700 |               1 |
+|           110 | Accounting           |        1700 |               1 |
+|           130 | Corporate Tax        |        1700 |               1 |
+|           140 | Control And Credit   |        1700 |               1 |
+|           150 | Shareholder Services |        1700 |               1 |
+|           160 | Benefits             |        1700 |               1 |
+|           170 | Payroll              |        1700 |               2 |
++---------------+----------------------+-------------+-----------------+
+15 rows in set (0.02 sec)
+
+
+4. Write an SQL query to display employees who earn more than the average salary in that company
+
+mysql> select *
+    -> from employee
+    -> where salary > (select avg(salary)
+    -> from employee);
++-------------+-------------+-----------+----------+--------------+------------+------------+--------+----------------+------------+---------------+
+| employee_id | first_name  | last_name | email    | phone_number | hire_date  | job_id     | salary | commission_pct | manager_id | department_id |
++-------------+-------------+-----------+----------+--------------+------------+------------+--------+----------------+------------+---------------+
+|         100 | Steven      | King      | SKING    | 515.123.4567 | 1987-06-17 | AD_PRES    |  24000 |           NULL |       NULL |            20 |
+|         101 | Neena       | Kochhar   | NKOCHHAR | 515.123.4568 | 1989-11-21 | AD_VP      |  17000 |           NULL |        100 |            20 |
+|         102 | Lex         | De Haan   | LDEHAAN  | 515.123.4569 | 1993-09-12 | AD_VP      |  17000 |           NULL |        100 |            30 |
+|         103 | Alexander   | Hunold    | AHUNOLD  | 590.423.4567 | 1990-09-30 | IT_PROG    |   9000 |           NULL |        102 |            60 |
+|         108 | Nancy       | Greenberg | NGREENBE | 515.124.4569 | 1994-08-17 | FI_MGR     |  12000 |           NULL |        101 |           100 |
+|         109 | Daniel      | Faviet    | DFAVIET  | 515.124.4169 | 1994-08-12 | FI_ACCOUNT |   9000 |           NULL |        108 |           170 |
+|         110 | John        | Chen      | JCHEN    | 515.124.4269 | 1997-04-09 | FI_ACCOUNT |   8200 |           NULL |        108 |           170 |
+|         111 | Ismael      | Sciarra   | ISCIARRA | 515.124.4369 | 1997-02-01 | FI_ACCOUNT |   7700 |           NULL |        108 |           160 |
+|         112 | Jose Manuel | Urman     | JMURMAN  | 515.124.4469 | 1998-06-03 | FI_ACCOUNT |   7800 |           NULL |        108 |           150 |
+|         114 | Den         | Raphaely  | DRAPHEAL | 515.127.4561 | 1994-11-08 | PU_MAN     |  11000 |           NULL |        100 |            30 |
+|         120 | Matthew     | Weiss     | MWEISS   | 650.123.1234 | 1996-07-18 | ST_MAN     |   8000 |           NULL |        100 |            50 |
+|         121 | Adam        | Fripp     | AFRIPP   | 650.123.2234 | 1997-08-09 | ST_MAN     |   8200 |           NULL |        100 |            50 |
+|         122 | Payam       | Kaufling  | PKAUFLIN | 650.123.3234 | 1995-05-01 | ST_MAN     |   7900 |           NULL |        100 |            40 |
++-------------+-------------+-----------+----------+--------------+------------+------------+--------+----------------+------------+---------------+
+13 rows in set (0.02 sec)
+
+
+
+
+
+
+
+
+
+5. Find the maximum salary from each department.
+
+mysql> select department_id, max(salary) as maximum_salary
+    -> from employee
+    -> inner join departments using(department_id)
+    -> group by department_id
+    -> order by department_id
+    -> ;
++---------------+----------------+
+| department_id | maximum_salary |
++---------------+----------------+
+|            20 |          24000 |
+|            30 |          17000 |
+|            40 |           7900 |
+|            50 |           8200 |
+|            60 |           9000 |
+|            70 |           2900 |
+|            80 |           5800 |
+|            90 |           2400 |
+|           100 |          12000 |
+|           110 |           2800 |
+|           130 |           2500 |
+|           140 |           6900 |
+|           150 |           7800 |
+|           160 |           7700 |
+|           170 |           9000 |
++---------------+----------------+
+15 rows in set (0.00 sec)
+
+
+6. Display the managers and the reporting employees who work in different departments
+
+

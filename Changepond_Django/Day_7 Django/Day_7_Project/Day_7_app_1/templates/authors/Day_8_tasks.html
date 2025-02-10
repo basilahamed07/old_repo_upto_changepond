@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block page_title %}day 8 task{% endblock page_title %}
+{% block content %}
+<h2>by using the count function<h2>
+<h1>Count of Authors = {{counts}}</h1>
+<h2>by using the count Rating<h2>
+<h1>average of ratings = {{average.rating__avg}}</h1>
+{% comment %} <h2>by using the count author names<h2> {% endcomment %}
+<ul>
+{% for trash in orders %}
+<li><h1>{{trash}}<h1></li>
+{% endfor %}
+</ul>
+
+{% endblock content %}

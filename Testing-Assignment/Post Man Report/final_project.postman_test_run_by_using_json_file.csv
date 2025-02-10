@@ -1,0 +1,108 @@
+{
+	"id": "15973bb3-042c-4796-bf45-44cc425e0c02",
+	"name": "final_project",
+	"timestamp": "2024-07-04T10:57:54.010Z",
+	"collection_id": "36734952-a37c58e5-ac64-415d-a2d2-b457d5190db5",
+	"folder_id": 0,
+	"environment_id": "36734952-93e3c20c-b001-4660-b9dd-06815dd4a481",
+	"totalPass": 8,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2024-07-04T10:57:52.732Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "f47a4df2-930c-43f8-9292-a7cbdcbd17b8",
+			"name": "HomePage",
+			"url": "http://localhost:3000/",
+			"time": 3,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 4,
+					"fail": 0
+				}
+			},
+			"times": [
+				6,
+				3,
+				7,
+				3
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				}
+			]
+		},
+		{
+			"id": "3f68c3a4-b29d-47e4-83c2-3f0714497db4",
+			"name": "user_psot",
+			"url": "http://localhost:8888/users",
+			"time": 27,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 4,
+					"fail": 0
+				}
+			},
+			"times": [
+				14,
+				12,
+				16,
+				27
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				},
+				{
+					"Status code is 200": true
+				}
+			]
+		}
+	],
+	"count": 4,
+	"totalTime": 88,
+	"collection": {
+		"requests": [
+			{
+				"id": "f47a4df2-930c-43f8-9292-a7cbdcbd17b8",
+				"method": "GET"
+			},
+			{
+				"id": "3f68c3a4-b29d-47e4-83c2-3f0714497db4",
+				"method": "POST"
+			}
+		]
+	}
+}

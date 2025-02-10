@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>replace</title>
+   
+
+    <!-- string replace task completed logics and wait to desigmning part -->
+
+
+    <style>
+        .container{
+            height: 100vh;
+            width: 100%;
+            justify-content: center;
+            align-items: center;    
+
+        }
+        .insde{
+            height: 90%;
+            width: 90%;
+            border: 5px solid violet;
+            box-shadow: 10px 10px 20px;
+        }
+
+        textarea{
+            margin: 20px;
+            padding: 20px;
+            height: 700px;
+            width: 500px;
+            border-radius: 20px;
+            border: 2px solid red;
+            color: blue;
+            font-size: xx-large;
+            display: inline;
+        }
+        input{
+            margin: 20px;
+            padding: 20px;
+            height: 50px;
+            width: 200px;
+            border-radius: 20px;
+            border: 2px solid red;
+            color: blue;
+            font-size: xx-large;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="insde">
+            <div style="display: inline;">
+                <textarea name="" id="mess"></textarea>
+            </div>
+            <div>
+                <label for="">Enter the replace text</label>
+                <input type="text" id="reolace">
+                <label for="">enter the new txt</label>
+                <input type="text" name="" id="newtext">
+            </div>
+   
+
+    
+    <button type="button" onclick="replace_single()">replace single text</button>
+     <button type="button" onclick="replace_all()"> replace all text</button>
+    </div>
+</div>
+</div>
+    <script>
+        
+        function replace_single(){
+            let old_txt = document.getElementById("reolace").value
+            let new_txt = document.getElementById("newtext").value
+            let messgae = document.getElementById("mess").value
+            console.log(messgae)
+            let finasl = messgae.replace(old_txt,new_txt)
+            console.log(finasl)
+            document.getElementById("mess").value = finasl
+        }
+
+        function replace_all(){
+            let old_txt = document.getElementById("reolace").value
+            let new_txt = document.getElementById("newtext").value
+            let messgae = document.getElementById("mess").value
+            console.log(messgae)
+            let finasl = messgae.replaceAll(old_txt,new_txt)
+            console.log(finasl)
+            document.getElementById("mess").value = finasl
+        }
+    </script>
+</body>
+</html>

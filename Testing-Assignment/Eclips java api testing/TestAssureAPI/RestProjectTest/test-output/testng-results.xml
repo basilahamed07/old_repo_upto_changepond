@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-07-05T17:17:28 IST" name="Default suite" finished-at="2024-07-05T17:17:30 IST" duration-ms="1548">
+    <groups>
+    </groups>
+    <test started-at="2024-07-05T17:17:28 IST" name="Default test" finished-at="2024-07-05T17:17:30 IST" duration-ms="1548">
+      <class name="FirstTest.java.Home_page">
+        <test-method signature="DelRequest()[pri:0, instance:FirstTest.java.Home_page@5c33f1a9]" started-at="2024-07-05T17:17:28 IST" name="DelRequest" finished-at="2024-07-05T17:17:30 IST" duration-ms="1500" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DelRequest -->
+      </class> <!-- FirstTest.java.Home_page -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

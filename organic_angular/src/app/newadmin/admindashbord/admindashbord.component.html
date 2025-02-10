@@ -1,0 +1,299 @@
+<div class="bg-gray-900 text-white font-poppins">
+    <div class="flex h-screen overflow-hidden">
+        <!-- --------------------- Admin Dashboard ---------------------------- -->
+        <nav class="admin-navbar">
+            <div class="navbar-header">
+                <img src="favicon.avif" alt="Logo" class="navbar-logo">
+                <h1 class="navbar-title">Organic Website</h1>
+            </div>
+            <ul class="navbar-menu">
+                <li class="menu-item active">
+                    <a href="#" data-page="dashboard">
+                        <i class="fas fa-home"></i>
+                        <span>OverView</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#" data-page="messages">
+                        <i class="fas fa-envelope"></i>
+                        <span>Userlist</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#" data-page="analytics">
+                        <i class="fas fa-chart-bar"></i>
+                        <span>Prodactlist</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#" data-page="files">
+                        <i class="fas fa-folder"></i>
+                        <span>Shipping details</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#" data-page="users">
+                        <i class="fas fa-users"></i>
+                        <span>Order details</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#" data-page="users">
+                        <i class="fas fa-users"></i>
+                        <span>Add items</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#" data-page="users">
+                        <i class="fas fa-users"></i>
+                        <span>User add</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#" data-page="settings">
+                        <i class="fas fa-cog"></i>
+                        <span>Category add</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+        <!-- --------------------- Admin Dashboard End ---------------------------- -->
+
+        <!-- --------------------- Above Dashboard ---------------------------- -->
+        <main class="flex-1 overflow-x-hidden overflow-y-auto bg-gray-900">
+            <header class="bg-gray-800 p-4 flex justify-between items-center sticky top-0 z-10 shadow-md">
+                <h2 id="pageTitle" class="text-3xl font-bold">Admin Dashboard</h2>
+                <div class="flex items-center space-x-6">
+                    <div class="relative">
+                        <!-- Space for additional content -->
+                    </div>
+                    <div id="notificationBtn" class="relative p-2 rounded-full hover:bg-gray-700 transition-colors duration-300">
+                        <!-- Notification Icon -->
+                        <!-- <i class="fas fa-bell text-xl"></i> -->
+                        <!-- <span class="notification-badge">3</span> -->
+                    </div>
+                    <!-- ------------------- Right Profile ---------------------------- -->
+                    <div class="relative" id="profileMenuContainer">
+                        <button id="profileMenuBtn" class="flex items-center space-x-3 focus:outline-none">
+                            <img src="https://randomuser.me/api/portraits/men/1.jpg" alt="Admin" class="rounded-full w-10 h-10">
+                            <div class="hidden md:block text-left">
+                                <!-- <p class="font-semibold">Super</p> -->
+                                <p class="text-sm text-gray-400">Super Admin</p>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <div class="p-6 space-y-8">
+                <div id="dashboardContent">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                        <div class="stat-card bg-gradient-purple">
+                            <p class="text-gray-200 mb-1">Total users</p>
+                            <p class="text-3xl font-bold">{{catusercount}}<i class="fas fa-user text-purple-300 text-sm ml-1"></i></p>
+                        </div>
+                        <div class="stat-card bg-gradient-green">
+                            <p class="text-gray-200 mb-1">Total products</p>
+                            <p class="text-3xl font-bold">587 <i class="fas fa-dollar-sign text-green-300 text-sm ml-1"></i></p>
+                        </div>
+                        <div class="stat-card bg-gradient-blue">
+                            <p class="text-gray-200 mb-1">Total orders</p>
+                            <p class="text-3xl font-bold">237 <i class="fas fa-project-diagram text-blue-300 text-sm ml-1"></i></p>
+                        </div>
+                        <div class="stat-card bg-gradient-yellow">
+                            <p class="text-gray-200 mb-1">Feedback</p>
+                            <p class="text-3xl font-bold">350 <i class="fas fa-chart-line text-yellow-300 text-sm ml-1"></i></p>
+                        </div>
+                    </div>
+
+                    <!-- ---------------------------- Graph Content --------------------------- -->
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+                        <div class="chart-card">
+                            <h3 class="text-xl font-semibold mb-4">Total Orders</h3>
+                            <div id="userGrowthChart" class="h-80"></div>
+                        </div>
+                        <div class="chart-card">
+                            <h3 class="text-xl font-semibold mb-4">Total Content</h3>
+                            <div id="revenueOverviewChart" class="h-80"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- -------------------------------------- End of Graph Content -------------------------------- -->
+
+                <!-- ----------------------------------------- Total User List by Looping ------------------------------------------- -->
+                <div id="messagesContent" class="hidden">
+                    <!-- Hidden block for adding form -->
+                    <a routerLink="useradd">
+                        <input type="checkbox" id="toggleCheckbox" class="hidden-checkbox flex items-center focus:outline-none">
+                        <label for="toggleCheckbox" class="toggle-label">Add user</label>
+                    </a>
+                    <div class="rounded-xl p-6 mb-8">
+                        <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                            <div *ngFor="let item of data">
+                                <ul class="list">
+                                    <li class="list-item">
+                                        <div>
+                                            <img src="https://i.pinimg.com/474x/89/b1/d4/89b1d419bf1e7a9d2df7fa55dec05d14.jpg" class="list-item-image">
+                                        </div>
+                                        <div class="list-item-content">
+                                            <h4>Hitesh Kumar</h4>
+                                            <p>hk-skit</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- ---------------------------------------- End of Total User -------------------------------- -->
+
+                <!-- ------------------------------------------ Product List ------------------------------------ -->
+                <div id="analyticsContent" class="hidden">
+                    <a routerLink="prodactadd">
+                        <!-- Hidden block for adding form -->
+                        <input type="checkbox" id="toggleCheckbox1" class="hidden-checkbox flex items-center focus:outline-none">
+                        <label for="toggleCheckbox1" class="toggle-label">Add product</label>
+                    </a>
+                    <br><br>
+                    <div class="bg-gray-800 rounded-xl p-6 mb-8">
+                        <h3 class="text-xl font-semibold mb-4">Product Details</h3>
+                        <table class="w-full">
+                            <thead>
+                                <tr>
+                                    <th class="text-left py-2">Product Image</th>
+                                    <th class="text-left py-2">Product Name</th>
+                                    <th class="text-left py-2">Product Price</th>
+                                    <th class="text-left py-2">Product Stock</th>
+                                    <th class="text-left py-2">Product Category ID</th>
+                                    <th class="text-left py-2">Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let trash of data">
+                                    <td class="py-2">
+                                        <img class="w-10 h-10 rounded-full" src="{{trash.P_image}}" alt="Product Image">
+                                    </td>
+                                    <td class="py-2">{{trash.P_Name}}</td>
+                                    <td class="py-2">{{trash.P_Price}}</td>
+                                    <td class="py-2">{{trash.P_Stock}}</td>
+                                    <td class="py-2" *ngIf="trash.P_Category_id === 1">
+                                        <h3>100% Organic</h3>
+                                    </td>
+                                    <td class="py-2" *ngIf="trash.P_Category_id === 2">
+                                        <h3>Organic</h3>
+                                    </td>
+                                    <td class="py-2" *ngIf="trash.P_Category_id === 3">
+                                        <h3>Made with Organic Ingredients</h3>
+                                    </td>
+                                    <td class="py-2" *ngIf="trash.P_Category_id === 4">
+                                        <h3>Ingredient Panel</h3>
+                                    </td>
+                                    <td class="py-2">
+                                        <button type="button" routerLink="/admindash/{{trash.id}}/editeprodact"
+                                            class="text-gray-900 bg-gradient-to-r from-lime-200 via-lime-400 to-lime-500 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-lime-300 dark:focus:ring-lime-800 shadow-lg shadow-lime-500/50 dark:shadow-lg dark:shadow-lime-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
+                                            Edit
+                                        </button>
+                                        <button type="button" (click)="deleteDataprodact(trash.id)"
+                                            class="text-white bg-gradient-to-r from-red-400 via-red-500 to-red-600 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 shadow-lg shadow-red-500/50 dark:shadow-lg dark:shadow-red-800/80 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">
+                                            Delete
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- ------------------------------------------ End of Product List ------------------------------------ -->
+
+                <!-- ------------------------------------------- Shipping Details -------------------------------------------- -->
+                <div id="filesContent" class="hidden">
+                    <div class="bg-gray-800 rounded-xl p-6 mb-8">
+                        <h3 class="text-xl font-semibold mb-4">Shipping Details</h3>
+                        <table class="w-full">
+                            <thead>
+                                <tr>
+                                    <th class="text-left py-2">Shipping ID</th>
+                                    <th class="text-left py-2">Shipping Status</th>
+                                    <th class="text-left py-2">Tracking ID</th>
+                                    <th class="text-left py-2">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let trash of shipping">
+                                    <td class="py-2">{{trash.Shipping_id}}</td>
+                                    <td class="py-2">{{trash.shipping_status}}</td>
+                                    <td class="py-2">{{trash.tracking_id}}</td>
+                                    <td class="py-2" *ngIf="trash.shipping_status === 'P'">
+                                        <h1>2 Day Delivery</h1>
+                                    </td>
+                                    <td class="py-2" *ngIf="trash.shipping_status === 'D'">
+                                        <h1>Delivered</h1>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- ------------------------------------------- End of Shipping Details -------------------------------------------- -->
+
+                <!-- ------------------------------------------- Order Details -------------------------------------------- -->
+                <div id="usersContent" class="hidden">
+                    <div class="bg-gray-800 rounded-xl p-6 mb-8">
+                        <h3 class="text-xl font-semibold mb-4">Order Details</h3>
+                        <table class="w-full">
+                            <thead>
+                                <tr>
+                                    <th class="text-left py-2">User</th>
+                                    <th class="text-left py-2">Order ID</th>
+                                    <th class="text-left py-2">Shipping ID</th>
+                                    <th class="text-left py-2">Order Date</th>
+                                    <th class="text-left py-2">Total Amount</th>
+                                    <th class="text-left py-2">Product</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let trash of order">
+                                    <td class="py-2">{{trash.user_id}}</td>
+                                    <td class="py-2">{{trash.order_id}}</td>
+                                    <td class="py-2">{{trash.shipping_id}}</td>
+                                    <td class="py-2">{{trash.order_date}}</td>
+                                    <td class="py-2">{{trash.Total_amount}}</td>
+                                    <td class="py-2">{{trash.products_id}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- ------------------------------------------- End of Order Details -------------------------------------------- -->
+
+                <!-- ------------------------------------------- Settings -------------------------------------------- -->
+                <div id="settingsContent" class="hidden">
+                    <div class="bg-gray-800 rounded-xl p-6 mb-8">
+                        <h3 class="text-xl font-semibold mb-4">Account Settings</h3>
+                        <form>
+                            <div class="mb-4">
+                                <label for="username" class="block mb-2">Username</label>
+                                <input type="text" id="username" [(ngModel)]="userObj.category_name"
+                                    name="Category_Name" class="w-full bg-gray-700 rounded px-3 py-2" value="admin">
+                            </div>
+                            <div class="mb-4">
+                                <label for="email" class="block mb-2">Email</label>
+                                <input type="email" id="email" class="w-full bg-gray-700 rounded px-3 py-2"
+                                    value="admin">
+                            </div>
+                            <div class="mb-4">
+                                <label for="password" class="block mb-2">New Password</label>
+                                <input type="password" id="password" class="w-full bg-gray-700 rounded px-3 py-2">
+                            </div>
+                            <button type="submit"
+                                class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Save Changes</button>
+                        </form>
+                    </div>
+                </div>
+                <!-- ------------------------------------------- End of Settings -------------------------------------------- -->
+            </div>
+        </main>
+    </div>
+</div>
+

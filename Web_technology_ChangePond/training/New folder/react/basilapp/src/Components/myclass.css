@@ -1,0 +1,11 @@
+.imgproperty{
+    border-radius: 30px;
+    box-shadow: 10px 10px 30px;
+    opacity: 0.5;
+}
+
+.imgproperty:hover{
+    scale: 1.1;
+    opacity: 1;
+}
+

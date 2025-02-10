@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Protest+Riot&display=swap');
+
+* {
+    font-family: "Protest Riot", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    background-image: url("https://www.worldwidecollege.in/uploads/blogs/Most-Affordable-Countries-to-Study-Abroad1584558443.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#logo {
+    font-size: 70px;
+    position: absolute;
+    left: 25%;
+    top: 10%;
+}
+
+.container {
+    height: 300px;
+    width: 300px;
+    border: 1px solid black;
+    border-radius: 88% 12% 73% 27% / 38% 45% 55% 62%;
+    background-color: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(5px);
+    transition: width 1s, height 1s; /* Added transition property here */
+}
+
+#one {
+    position: absolute;
+    left: 300px;
+    top: 40%;
+}
+
+#two {
+    position: absolute;
+    left: 900px;
+    top: 40%;
+}
+
+#one:hover {
+    width: 350px; 
+    height: 350px;
+    background: url("https://i.makeagif.com/media/11-27-2021/7DE0_V.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+#two:hover {
+    width: 350px; 
+    height: 350px;
+    background: url("https://i.gifer.com/origin/07/07ff44c2ef283dabe291286283ab1df4_w200.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+#text {
+    font-size: xx-large;
+    margin-top: 150px;
+}
+
+.countries {
+    height: 650px;
+    width: 1200px;
+    border: 1px black solid;
+    position: absolute;
+    top: 10%;
+    left: 150px;
+    background-color: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(50px);
+    border-radius: 30px;
+}
+table{
+    margin-left: 70px;
+    margin-top: 30px;
+    width: 90%;
+    height: 90%;
+    border-radius: 10px;
+}
+#heading{
+    color: blueviolet;
+}
+
+#cou {
+    padding-left: 35%;
+}
+
+#imp {
+    color: red;
+    text-decoration: underline;
+    border: 3px black solid;
+}
+
+#back {
+    border-radius: 10px;
+    height: 50px;
+    width: 100px;
+    position: absolute;
+    top: 90%;
+    left: 90%;
+    background-color: greenyellow;
+}
+
+
+.link_con {
+    height: 300px;
+    width: 300px;
+    border: 1px solid black;
+    background-color: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(50px);
+    border-radius: 30px;
+    box-shadow: 1px 1px 10px;
+    font-size: 25px;
+}
+
+#ones{
+    position: absolute;
+    top: 5%;
+    left: 50px;
+}
+
+#twos{
+    position: absolute;
+    top: 5%;
+    left: 400px;
+}
+
+#three{
+    position: absolute;
+    top: 5%;
+    left: 750px;
+}
+
+#four{
+    position: absolute;
+    top: 5%;
+    left: 1100px;
+}
+
+#five{
+    position: absolute;
+    top: 53%;
+    left: 50px;
+}
+
+#six{
+    position: absolute;
+    top: 53%;
+    left: 400px;
+}
+
+#seven{
+    position: absolute;
+    top: 53%;
+    left: 750px;
+}
+
+#eight{
+    position: absolute;
+    top: 53%;
+    left: 1100px;
+}
+
+#nine{
+    position: absolute;
+    top: 100%;
+    left: 50px;
+}
+
+#ten{
+    position: absolute;
+    top: 100%;
+    left: 400px;
+}
+
+#_11{
+    position: absolute;
+    top: 100%;
+    left: 750px;
+}
+#_12{
+    position: absolute;
+    top: 100%;
+    left: 1100px;
+}
+
+

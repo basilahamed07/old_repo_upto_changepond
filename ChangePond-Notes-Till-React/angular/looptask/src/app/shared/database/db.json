@@ -1,0 +1,16 @@
+{
+    "product":[
+        {"id":1,"pname":"laptop","prince":23456567575,"company":"aleanware"},
+        {"id":2,"pname":"laptop","prince":23456567575,"company":"mp oman"},
+        {"id":3,"pname":"computer","prince":23456567575,"company":"dell"},
+        {"id":4,"pname":"laptop","prince":23456567575,"company":"hp"},
+        {"id":5,"pname":"workspace","prince":23456567575,"company":"aleanware"},
+        {"id":6,"pname":"laptop","prince":23456567575,"company":"msi"},
+        {"id":7,"pname":"codespace","prince":23456567575,"company":"github"}
+    ],
+    "user":[
+        {"id":1,"uname":"basilahamed46@gmail.com","upass":"dontknow"},
+        {"id":2,"uname":"mohamedfarvezgmail.com","upass":"priya"},
+        {"id":1,"uname":"mohamedfawaz@gmail.com","upass":"diviya"}
+    ]
+}

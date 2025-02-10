@@ -1,0 +1,12 @@
+{%extends "base.html"%}
+{%block page_title%}author name {%endblock%}
+{%block content%}
+<h1>Author name</h1>
+{%for trash in author%}
+<h1>First Name = {{trash.First_name}}</h1>
+<h1>Lirst Name ={{trash.last_name}}</h1>
+<h1>Age = {{trash.age}}</h1>
+<h1>Rating = {{trash.rating}}</h1>
+<h1>city = {{trash.city}}</h1>
+{%endfor%}
+{%endblock%}

@@ -1,0 +1,27 @@
+Table = it was an collection of eows and columa
+
+in this table we have the three contenet:
+table:
+    tr: Table row
+    td: table definaction 
+    th: table head
+
+bOX MODELS:
+1) content = it can be any text or image
+2) padding = it was ues to clear the area between content and element
+3) margine = it was use to clear the area between the element to web page
+4) border - it was used to create an like around the div or element
+
+Position element:
+    1) it was used to move element adter left, right, top and bottomm  values, beacause every element has by default Position:status that why element will never move after appling left,right,top and bottom value
+positionL
+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+06/06/2024
+
+Background Imge property
+*opacity = it was used to make the element Background transprant
+            it value between 0  and 1
+

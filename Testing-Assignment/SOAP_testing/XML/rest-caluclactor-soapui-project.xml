@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="cd9a536f-f172-4629-a2be-0d3b597877eb" activeEnvironment="Default" name="rest caluclactor" resourceRoot="" soapui-version="5.7.2" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" id="2ee4247e-e1b7-4867-bf73-0f5f42ad6844" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://www.dneonline.com" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings><con:setting id="CreateWadlDocumentationAction@report-directory">D:\Testing\SOAP_testing</con:setting></con:settings><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>http://www.dneonline.com</con:endpoint></con:endpoints><con:resource name="Calculator.asmx" path="/calculator.asmx" id="fe3683bf-5c4c-46f4-9fe4-799d41caed76"><con:settings/><con:parameters><con:parameter><con:name>WSDL</con:name><con:value/><con:style>QUERY</con:style><con:default/><con:path xsi:nil="true"/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="Calculator.asmx 1" id="f4a5e781-9c7d-41b5-82db-dffc1685bb34" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>text/html; charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/><con:element>html</con:element></con:representation><con:representation type="RESPONSE"><con:mediaType>text/html; charset=utf-8</con:mediaType><con:status>200</con:status><con:params/><con:element>html</con:element></con:representation><con:request name="Request 1" id="3062d4ec-ec2b-4e3f-861f-69710d406035" mediaType="application/json"><con:settings/><con:endpoint>http://www.dneonline.com</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="WSDL" value="" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>WSDL</con:entry></con:parameterOrder></con:request></con:method></con:resource></con:interface><con:interface xsi:type="con:RestService" id="efd6f617-4d71-446d-ba92-3b66afa4d867" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://www.dneonline.com" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>http://www.dneonline.com</con:endpoint></con:endpoints><con:resource name="Calculator.asmx" path="/calculator.asmx" id="1f9d7dc3-a940-4307-acc5-754db468000d"><con:settings/><con:parameters><con:parameter><con:name>op</con:name><con:value>Add</con:value><con:style>QUERY</con:style><con:default>Add</con:default><con:path xsi:nil="true"/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="Calculator.asmx 1" id="9de698f5-8abe-49f3-bbc4-16d65ce14e7c" method="GET"><con:settings/><con:parameters/><con:representation type="RESPONSE"><con:mediaType>text/html; charset=UTF-8</con:mediaType><con:status>200</con:status><con:params/><con:element>html</con:element></con:representation><con:request name="Request 1" id="40942f0a-7544-4b39-83ee-63b8f9960449" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://www.dneonline.com</con:endpoint><con:request/><con:originalUri>http://www.dneonline.com/calculator.asmx</con:originalUri><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="op" value="Add" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>op</con:entry></con:parameterOrder></con:request></con:method></con:resource></con:interface><con:interface xsi:type="con:RestService" id="9d2c170a-f5d6-4348-8087-c69da473340e" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://www.dneonline.com" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>http://www.dneonline.com</con:endpoint></con:endpoints><con:resource name="Calculator.asmx" path="/calculator.asmx" id="f1149ba3-51bf-4ae8-9977-56d0d81586f8"><con:settings/><con:parameters><con:parameter><con:name>op</con:name><con:value>Divide</con:value><con:style>QUERY</con:style><con:default>Divide</con:default><con:path xsi:nil="true"/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="Calculator.asmx 1" id="8111e2c0-38bb-475d-8b04-49ab6720f6b7" method="GET"><con:settings/><con:parameters/><con:request name="Request 1" id="246efdff-4d47-4d8e-85c9-3ccf50dfa6e2" mediaType="application/json"><con:settings/><con:endpoint>http://www.dneonline.com</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="op" value="Divide" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>op</con:entry></con:parameterOrder></con:request></con:method></con:resource></con:interface><con:interface xsi:type="con:RestService" id="3be12c3b-8dad-4053-b05b-a8b7f299f5b7" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://www.dneonline.com" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>http://www.dneonline.com</con:endpoint></con:endpoints><con:resource name="Calculator.asmx" path="/calculator.asmx" id="da606e4c-a9c8-4e63-8333-34f36f47d52a"><con:settings/><con:parameters><con:parameter><con:name>op</con:name><con:value>Multiply</con:value><con:style>QUERY</con:style><con:default>Multiply</con:default><con:path xsi:nil="true"/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="Calculator.asmx 1" id="3f11da72-6c35-4a8f-8a52-4ad56d27b5e0" method="GET"><con:settings/><con:parameters/><con:request name="Request 1" id="fcd40610-014a-47df-9452-dd5111dc0bc2" mediaType="application/json"><con:settings/><con:endpoint>http://www.dneonline.com</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="op" value="Multiply" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>op</con:entry></con:parameterOrder></con:request></con:method></con:resource></con:interface><con:interface xsi:type="con:RestService" id="73ff99d1-e659-44b9-b048-b0c284393d62" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://www.dneonline.com" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart=""/><con:endpoints><con:endpoint>http://www.dneonline.com</con:endpoint></con:endpoints><con:resource name="Calculator.asmx" path="/calculator.asmx" id="663fa814-da6b-41b0-8131-c6739a06f4f8"><con:settings/><con:parameters><con:parameter><con:name>op</con:name><con:value>Subtract</con:value><con:style>QUERY</con:style><con:default>Subtract</con:default><con:path xsi:nil="true"/><con:description xsi:nil="true"/></con:parameter></con:parameters><con:method name="Calculator.asmx 1" id="92ac6720-e940-4de9-a240-e629e255271b" method="GET"><con:settings/><con:parameters/><con:request name="Request 1" id="cfc71107-1617-4fde-b8f3-18eac21f68b9" mediaType="application/json"><con:settings/><con:endpoint>http://www.dneonline.com</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="op" value="Subtract" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>op</con:entry></con:parameterOrder></con:request></con:method></con:resource></con:interface><con:testSuite id="db752b68-24ff-4eba-a027-b7cc39669392" name="calculator testcase"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="0e8bf48c-14fe-4ca7-85a3-8194a99608d0" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="calculator" searchProperties="true"><con:settings/><con:testStep type="restrequest" name="Calculator.asmx 1 - Request 1" id="39692264-0552-42cc-a816-c9ad0eb7c532"><con:settings/><con:config service="http://www.dneonline.com" resourcePath="/calculator.asmx" methodName="Calculator.asmx 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="Calculator.asmx 1 - Request 1" id="3062d4ec-ec2b-4e3f-861f-69710d406035" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://www.dneonline.com</con:endpoint><con:request/><con:originalUri>http://www.dneonline.com/calculator.asmx</con:originalUri><con:assertion type="Simple Contains" id="85308845-df29-4845-9223-793edad44699" name="Contains 1"><con:configuration><token>web</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="WSDL" value="" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>WSDL</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="properties" name="Properties home" id="30a88d17-dede-4d67-b6a7-a39bf112f386"><con:settings/><con:config xsi:type="con:PropertiesStep" saveFirst="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:properties/></con:config></con:testStep><con:testStep type="restrequest" name="adiction1 - Request 1" id="b979e075-39db-44df-9c8d-0a20f0fc4c78"><con:settings/><con:config service="http://www.dneonline.com" resourcePath="/calculator.asmx" methodName="Calculator.asmx 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="adiction1 - Request 1" id="40942f0a-7544-4b39-83ee-63b8f9960449" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://www.dneonline.com</con:endpoint><con:request/><con:originalUri>http://www.dneonline.com/calculator.asmx</con:originalUri><con:assertion type="Simple Contains" id="179c2a30-31c5-4123-acda-2250a364c9b6" name="Contains"><con:configuration><token>C++</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="op" value="Add" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>op</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="mulitplay 1 - Request 1" id="add3bce6-60a1-4380-8278-f1677258df50"><con:settings/><con:config service="http://www.dneonline.com" resourcePath="/calculator.asmx" methodName="Calculator.asmx 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="mulitplay 1 - Request 1" id="246efdff-4d47-4d8e-85c9-3ccf50dfa6e2" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://www.dneonline.com</con:endpoint><con:request/><con:originalUri>http://www.dneonline.com/calculator.asmx</con:originalUri><con:assertion type="Simple Contains" id="c55645f4-d486-4964-9950-16791df67648" name="Contains"><con:configuration><token>calculator.asmx?op=Subtract</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="op" value="Divide" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>op</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="division- Request 1" id="19922e61-6efd-4e24-bf5b-291c1d0c552f"><con:settings/><con:config service="http://www.dneonline.com" resourcePath="/calculator.asmx" methodName="Calculator.asmx 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="division- Request 1" id="fcd40610-014a-47df-9452-dd5111dc0bc2" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://www.dneonline.com</con:endpoint><con:request/><con:originalUri>http://www.dneonline.com/calculator.asmx</con:originalUri><con:assertion type="Simple Contains" id="770d093c-6dd9-44c2-8f44-ccdc14d26d5c" name="Contains"><con:configuration><token>Below</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="op" value="Multiply" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>op</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="restrequest" name="subraction 1 - Request 1" id="0e394643-0748-462c-90c0-ec655ce866bd"><con:settings/><con:config service="http://www.dneonline.com" resourcePath="/calculator.asmx" methodName="Calculator.asmx 1" xsi:type="con:RestRequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:restRequest name="subraction 1 - Request 1" id="cfc71107-1617-4fde-b8f3-18eac21f68b9" mediaType="application/json"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:endpoint>http://www.dneonline.com</con:endpoint><con:request/><con:originalUri>http://www.dneonline.com/calculator.asmx</con:originalUri><con:assertion type="Simple Contains" id="d23af04f-1621-49d7-8a90-d6b8a05cb5cb" name="Contains"><con:configuration><token>calculator.asmx?op=Add</token><ignoreCase>false</ignoreCase><useRegEx>false</useRegEx></con:configuration></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters><entry key="op" value="Subtract" xmlns="http://eviware.com/soapui/config"/></con:parameters><con:parameterOrder><con:entry>op</con:entry></con:parameterOrder></con:restRequest></con:config></con:testStep><con:testStep type="groovy" name="GenerateCSVReport" id="bbbd4d5e-7b7e-47c5-8447-260efe04cc76"><con:settings/><con:config><script>// Try-catch block to handle exceptions
+try {
+
+// 1. Create a "SoapUIResults" folder in the project path 
+      // Retrieve the project root folder
+      def projectPath = new com.eviware.soapui.support.GroovyUtils(context).projectPath
+
+      // Specify a folder inside project root to store the results
+      String folderPath = projectPath + "/SoapUIResults";
+
+      // Create a File object for the specified path
+      def resultFolder = new File(folderPath);
+
+      // Check for existence of folder and create a folder
+      if(!resultFolder.exists())
+      {
+        resultFolder.mkdirs();
+      }
+
+/* ------------------------------------------------------------------------------- */
+
+// 2. Create a subfolder (with timestamp) to store the request-response local copy 
+      // Retrieve the latest execution date-time
+      Date d = new Date();
+      def executionDate = d.format("dd-MMM-yyyy HH_mm");
+
+      // Specify the subfolder path with name Request-Response_CurrentTimeStamp
+      String subfolderPath1 = folderPath+ "/Request-Response_"+executionDate;
+
+      // Create this sub-folder
+      new File(subfolderPath1).mkdirs();
+
+/* ------------------------------------------------------------------------------- */
+
+// 3. Create another subfolder "CSV Reports" to store the reports file 
+      // Specify the subfolder path with name CSV Reports
+      String subfolderPath2 = folderPath+ "/CSV Reports";
+
+      // Create this sub-folder
+      new File(subfolderPath2).mkdirs();
+
+/* ------------------------------------------------------------------------------- */
+
+// 4. Create a Report.csv file inside the CSV Reports folder 
+      // Create a File object for Report csv file (with timestamp)
+      def reportFile = new File(subfolderPath2, "Report_"+executionDate+".csv");
+
+      // Check for existence of report file and create a file
+      if(!reportFile.exists())
+      {
+        reportFile.createNewFile();
+        // Create required column names in the report file
+        reportFile.write('"Test Suite","Test Case","Test Step","Step Type","Step Status",'
+                        +'"Result message","Execution Date"');
+      }
+/* ------------------------------------------------------------------------------- */
+// 5. Inserting data in the file
+      // Iterate over all the test steps results
+  for(stepResult in testRunner.getResults())
+  {
+    // Retrieve Test Suite name
+   def testSuite = testRunner.testCase.testSuite.name;
+   // Retrieve Test Case name
+   def testCase = testRunner.testCase.name;
+   // Retrieve Test Step
+   def testStep = stepResult.getTestStep();
+   // Retrieve Test Step name
+   def testStepName = testStep.name
+   // Retrieve Test Step type
+   def type = testStep.config.type
+   // Retrieve Test Step status
+   def status = stepResult.getStatus()
+
+   // Creating new line in report file
+   reportFile.append('\n');
+
+   // Write all the necessary information in the file
+   reportFile.append('"' + testSuite + '",');
+   reportFile.append('"' + testCase + '",');
+   reportFile.append('"' + testStepName + '",');
+   reportFile.append('"' + type + '",');
+   reportFile.append('"' + status + '",');
+
+   // Retrieve the test result messages
+   reportFile.append('"');
+   for(resMessage in stepResult.getMessages())
+   {
+     // Write messages and separate multiple messages by new line
+     reportFile.append('Message:' + resMessage + '\n');
+   }
+   reportFile.append('",');
+
+   //Write executionDate in the file
+   reportFile.append('"' + executionDate + '",');
+/* ------------------------------------------------------------------------------- */
+// 6. Extract the request and response and save it to external file
+      // Verify if the test step type is request: SOAP project or restrequest: REST project
+        if((type=="request").or(type=="restrequest"))
+        {
+          // Extract the request from the test step
+          def extRequest = testStep.properties["Request"].value;    
+
+      // Create a file in the reports folder and write the request
+      // Naming convention: request_TestSuiteName_TestCaseName_TestStepName.txt
+      def requestFile=subfolderPath1+"/request_"+testSuite+"_"+testCase+"_"+testStepName+".txt";
+      def rqfile = new File(requestFile);
+      rqfile.write(extRequest, "UTF-8");
+
+      // Extract the response from the test step
+      def extResponse = stepResult.getResponseContent();    
+
+      // Create a file in the reports folder and write the response
+      // Naming convention: response_TestSuiteName_TestCaseName_TestStepName.txt
+      def responseFile=subfolderPath1+"/response_"+testSuite+"_"+testCase+"_"+testStepName+".txt";
+      def rsfile = new File(responseFile);
+      rsfile.write(extResponse, "UTF-8");
+     }
+   }
+ }
+catch(exc)
+{
+   log.error("Exception happened: " + exc.toString());
+}
+
+</script></con:config></con:testStep><con:tearDownScript>// Code to execute the GenerateCSVReport test step
+testRunner.testCase.testSuite.project.testSuites["Library"].testCases["Reporting_Utility"].
+testSteps["GenerateCSVReport"].run(testRunner, context);</con:tearDownScript><con:properties/></con:testCase><con:testCase id="2f532c36-6cd5-4430-8f3d-28ac354784af" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="reporting utility" searchProperties="true"><con:settings/><con:tearDownScript>// Code to execute the GenerateCSVReport test step
+testRunner.testCase.testSuite.project.testSuites["Library"].testCases["Reporting_Utility"].
+testSteps["GenerateCSVReport"].run(testRunner, context);</con:tearDownScript><con:properties/></con:testCase><con:properties><con:property><con:name>name</con:name><con:value>this is an testsuite property</con:value></con:property></con:properties></con:testSuite><con:testSuite id="ab8ebe0d-46e2-4a13-b71c-2a22d69e701f" name="TestSuite 2" disabled="true"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="ba500643-bca1-4d47-899f-35deaae3f85d" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="Reporting_Utility" searchProperties="true"><con:settings/><con:testStep type="groovy" name="GenerateCSVReport" id="a6cc1ff2-0442-467d-b10d-66b83b951aa2"><con:settings/><con:config><script>// Try-catch block to handle exceptions
+try {
+
+// 1. Create a "SoapUIResults" folder in the project path 
+      // Retrieve the project root folder
+      def projectPath = new com.eviware.soapui.support.GroovyUtils(context).projectPath
+
+      // Specify a folder inside project root to store the results
+      String folderPath = projectPath + "/SoapUIResults";
+
+      // Create a File object for the specified path
+      def resultFolder = new File(folderPath);
+
+      // Check for existence of folder and create a folder
+      if(!resultFolder.exists())
+      {
+        resultFolder.mkdirs();
+      }
+
+/* ------------------------------------------------------------------------------- */
+
+// 2. Create a subfolder (with timestamp) to store the request-response local copy 
+      // Retrieve the latest execution date-time
+      Date d = new Date();
+      def executionDate = d.format("dd-MMM-yyyy HH_mm");
+
+      // Specify the subfolder path with name Request-Response_CurrentTimeStamp
+      String subfolderPath1 = folderPath+ "/Request-Response_"+executionDate;
+
+      // Create this sub-folder
+      new File(subfolderPath1).mkdirs();
+
+/* ------------------------------------------------------------------------------- */
+
+// 3. Create another subfolder "CSV Reports" to store the reports file 
+      // Specify the subfolder path with name CSV Reports
+      String subfolderPath2 = folderPath+ "/CSV Reports";
+
+      // Create this sub-folder
+      new File(subfolderPath2).mkdirs();
+
+/* ------------------------------------------------------------------------------- */
+
+// 4. Create a Report.csv file inside the CSV Reports folder 
+      // Create a File object for Report csv file (with timestamp)
+      def reportFile = new File(subfolderPath2, "Report_"+executionDate+".csv");
+
+      // Check for existence of report file and create a file
+      if(!reportFile.exists())
+      {
+        reportFile.createNewFile();
+        // Create required column names in the report file
+        reportFile.write('"Test Suite","Test Case","Test Step","Step Type","Step Status",'
+                        +'"Result message","Execution Date"');
+      }
+/* ------------------------------------------------------------------------------- */
+// 5. Inserting data in the file
+      // Iterate over all the test steps results
+  for(stepResult in testRunner.getResults())
+  {
+    // Retrieve Test Suite name
+   def testSuite = testRunner.testCase.testSuite.name;
+   // Retrieve Test Case name
+   def testCase = testRunner.testCase.name;
+   // Retrieve Test Step
+   def testStep = stepResult.getTestStep();
+   // Retrieve Test Step name
+   def testStepName = testStep.name
+   // Retrieve Test Step type
+   def type = testStep.config.type
+   // Retrieve Test Step status
+   def status = stepResult.getStatus()
+
+   // Creating new line in report file
+   reportFile.append('\n');
+
+   // Write all the necessary information in the file
+   reportFile.append('"' + testSuite + '",');
+   reportFile.append('"' + testCase + '",');
+   reportFile.append('"' + testStepName + '",');
+   reportFile.append('"' + type + '",');
+   reportFile.append('"' + status + '",');
+
+   // Retrieve the test result messages
+   reportFile.append('"');
+   for(resMessage in stepResult.getMessages())
+   {
+     // Write messages and separate multiple messages by new line
+     reportFile.append('Message:' + resMessage + '\n');
+   }
+   reportFile.append('",');
+
+   //Write executionDate in the file
+   reportFile.append('"' + executionDate + '",');
+/* ------------------------------------------------------------------------------- */
+// 6. Extract the request and response and save it to external file
+      // Verify if the test step type is request: SOAP project or restrequest: REST project
+        if((type=="request").or(type=="restrequest"))
+        {
+          // Extract the request from the test step
+          def extRequest = testStep.properties["Request"].value;    
+
+      // Create a file in the reports folder and write the request
+      // Naming convention: request_TestSuiteName_TestCaseName_TestStepName.txt
+      def requestFile=subfolderPath1+"/request_"+testSuite+"_"+testCase+"_"+testStepName+".txt";
+      def rqfile = new File(requestFile);
+      rqfile.write(extRequest, "UTF-8");
+
+      // Extract the response from the test step
+      def extResponse = stepResult.getResponseContent();    
+
+      // Create a file in the reports folder and write the response
+      // Naming convention: response_TestSuiteName_TestCaseName_TestStepName.txt
+      def responseFile=subfolderPath1+"/response_"+testSuite+"_"+testCase+"_"+testStepName+".txt";
+      def rsfile = new File(responseFile);
+      rsfile.write(extResponse, "UTF-8");
+     }
+   }
+ }
+catch(exc)
+{
+   log.error("Exception happened: " + exc.toString());
+}
+
+</script></con:config></con:testStep><con:tearDownScript>// Code to execute the GenerateCSVReport test step
+testRunner.testCase.testSuite.project.testSuites["Library"].testCases["Reporting_Utility"].
+testSteps["GenerateCSVReport"].run(testRunner, context);</con:tearDownScript><con:properties/></con:testCase><con:properties/></con:testSuite><con:restMockService id="dd538b66-373c-4483-83ec-e4294bed9615" port="8080" path="/" host="CPDK254"><con:settings/><con:properties/></con:restMockService><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
